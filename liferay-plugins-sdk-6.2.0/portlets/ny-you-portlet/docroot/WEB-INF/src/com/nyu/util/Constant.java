@@ -1058,7 +1058,7 @@ public interface Constant {
 	String ACCEPT = "accept";
 	String DECLINE = "decline";
 	String YOUR_CUSTOM_ENTITY_ID = "yourCustomEntityId";
-	String CATEGORY_VOCABULARY = "NY-YOU";
+	String CATEGORY_VOCABULARY = "ACCESS";
 
 	String NEW_SHOW_REQUEST = "new Request";
 	String SHOW_REQUEST_PAGE = "showRequestPage";
