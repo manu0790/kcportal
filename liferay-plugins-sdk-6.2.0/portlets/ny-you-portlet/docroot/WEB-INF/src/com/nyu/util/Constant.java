@@ -6,8 +6,8 @@ import com.liferay.util.portlet.PortletProps;
 
 public interface Constant {
 	
-	public static String SITE_NAME = PortletProps.get("site.name");								//String NY_YOU = "NY-YOU";
-	
+	public static String SITE_NAME = PortletProps.get("site.name");	
+	public static String VOCABULARY_NAME = PortletProps.get("vocabulary.name");
 	
 	public static int LESSON_THUMBNAIL_IMAGE_WIDTH = 330;
 	
