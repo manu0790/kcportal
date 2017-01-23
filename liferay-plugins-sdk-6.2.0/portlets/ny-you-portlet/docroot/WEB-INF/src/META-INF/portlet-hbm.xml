@@ -1,0 +1,298 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.nyu.model.AnswerRequest" />
+	<import class="com.nyu.model.AuditReport" />
+	<import class="com.nyu.model.Basno" />
+	<import class="com.nyu.model.DocumentFile" />
+	<import class="com.nyu.model.DocumentSection" />
+	<import class="com.nyu.model.FavouriteLessons" />
+	<import class="com.nyu.model.Keywords" />
+	<import class="com.nyu.model.KeywordsCollaboration" />
+	<import class="com.nyu.model.Lesson" />
+	<import class="com.nyu.model.Lesson_Usergroups" />
+	<import class="com.nyu.model.LessonCollaboration" />
+	<import class="com.nyu.model.LessonObjectives" />
+	<import class="com.nyu.model.NYUUserGroup" />
+	<import class="com.nyu.model.RequestLesson" />
+	<import class="com.nyu.model.Slides" />
+	<import class="com.nyu.model.UserBadges" />
+	<import class="com.nyu.model.UserGroupRequest" />
+	<class name="com.nyu.model.impl.AnswerRequestImpl" table="nyyou_AnswerRequest">
+		<cache usage="read-write" />
+		<id name="answerId" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="requestLessonId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="appreciateUserIds" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="appreciateCount" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="checkedAnswer" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="opinionSurvey" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="myLessons" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="myFavouriteLessons" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="collaborationLessons" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="collaborationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.nyu.model.impl.AuditReportImpl" table="nyyou_AuditReport">
+		<cache usage="read-write" />
+		<id name="auditEventId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="eventType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="className" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="classPK" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="message" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="clientHost" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="clientIP" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="serverName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="serverPort" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="sessionID" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="additionalInfo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.nyu.model.impl.BasnoImpl" table="nyyou_Basno">
+		<cache usage="read-write" />
+		<id name="badgeId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="badgeName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="badgeUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="targetPoints" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="updatedDate" type="org.hibernate.type.TimestampType" />
+		<property name="updatedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.nyu.model.impl.DocumentFileImpl" table="nyyou_DocumentFile">
+		<cache usage="read-write" />
+		<id name="documentId" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="lessonId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="sectionId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="documentName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="documentDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="documentPath" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="resourceId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="collectionId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="resourceType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="downloadUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="docUuid" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hasAutoTranscript" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="permission" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.nyu.model.impl.DocumentSectionImpl" table="nyyou_DocumentSection">
+		<cache usage="read-write" />
+		<id name="id" column="id_" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="lessonId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="documentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="sectionTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="sectionNote" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lessonObjectiveIds" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="order" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="order_" />
+	</class>
+	<class name="com.nyu.model.impl.FavouriteLessonsImpl" table="nyyou_FavouriteLessons">
+		<cache usage="read-write" />
+		<composite-id name="primaryKey" class="com.nyu.service.persistence.FavouriteLessonsPK">
+			<key-property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+			<key-property name="lessonId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		</composite-id>
+	</class>
+	<class name="com.nyu.model.impl.KeywordsImpl" table="nyyou_Keywords">
+		<cache usage="read-write" />
+		<id name="id" column="id_" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="keyword" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="updatedDate" type="org.hibernate.type.TimestampType" />
+		<property name="updatedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.nyu.model.impl.KeywordsCollaborationImpl" table="nyyou_KeywordsCollaboration">
+		<cache usage="read-write" />
+		<id name="id" column="id_" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="keywordId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="keywordName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="markAs" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.nyu.model.impl.LessonImpl" table="nyyou_Lesson">
+		<cache usage="read-write" />
+		<id name="lessonId" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="lessonName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="author" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="courseId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="appreciatedUserIds" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="appreciateCount" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="uploadedTime" type="org.hibernate.type.TimestampType" />
+		<property name="uploadedById" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="uploadedByName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lessonNote" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="requestLessonId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="lessonPrivacy" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="featured" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="featured_" />
+		<property name="creator" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="secondaryAuthor" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="createBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="updatedDate" type="org.hibernate.type.TimestampType" />
+		<property name="updatedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="permission" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="markedAs" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="markedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="markedContent" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="currentAuthor" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="shareWithProfile" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="publishWithProfile" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="publishedProfile" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="version" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="lessonStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="statusByUserId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="statusDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.nyu.model.impl.Lesson_UsergroupsImpl" table="nyyou_Lesson_Usergroups">
+		<cache usage="read-write" />
+		<composite-id name="primaryKey" class="com.nyu.service.persistence.Lesson_UsergroupsPK">
+			<key-property name="lessonId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+			<key-property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		</composite-id>
+	</class>
+	<class name="com.nyu.model.impl.LessonCollaborationImpl" table="nyyou_LessonCollaboration">
+		<cache usage="read-write" />
+		<id name="id" column="id_" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="lessonId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="memberStatus" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="type" type="com.liferay.portal.dao.orm.hibernate.StringType" column="type_" />
+		<property name="accessPermission" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.nyu.model.impl.LessonObjectivesImpl" table="nyyou_LessonObjectives">
+		<cache usage="read-write" />
+		<id name="id" column="id_" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="lessonId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="objective" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.nyu.model.impl.NYUUserGroupImpl" table="nyyou_NYUUserGroup">
+		<cache usage="read-write" />
+		<id name="userGroupId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupPrivacy" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="appreciatedUserIds" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="appreciateCount" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="updatedDate" type="org.hibernate.type.TimestampType" />
+		<property name="updatedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="administrators" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="about" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="statusByUserId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="statusDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.nyu.model.impl.RequestLessonImpl" table="nyyou_RequestLesson">
+		<cache usage="read-write" />
+		<id name="requestLessonId" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="relatedLink" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="priority" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="acceptedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="appreciatedUserIds" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lastActivity" type="org.hibernate.type.TimestampType" />
+		<property name="acceptedNote" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="answerType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="sendTo" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="opnionSurveyLink" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="surveyOptions" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.nyu.model.impl.SlidesImpl" table="nyyou_Slides">
+		<cache usage="read-write" />
+		<id name="id" column="id_" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="descPosition" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="imageLink" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="updatedDate" type="org.hibernate.type.TimestampType" />
+		<property name="updatedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.nyu.model.impl.UserBadgesImpl" table="nyyou_UserBadges">
+		<cache usage="read-write" />
+		<id name="userBadgeId" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="badgeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="badgeUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.nyu.model.impl.UserGroupRequestImpl" table="nyyou_UserGroupRequest">
+		<cache usage="read-write" />
+		<id name="id" column="id_" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="userGroupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userGroupOwner" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="requestDate" type="org.hibernate.type.TimestampType" />
+		<property name="requestedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

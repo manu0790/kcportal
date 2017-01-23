@@ -147,6 +147,7 @@
 		<field name="markAs" type="String" />
 	</model>
 	<model name="com.nyu.model.Lesson">
+		<field name="uuid" type="String" />
 		<field name="lessonId" type="long" />
 		<field name="companyId" type="long" />
 		<field name="groupId" type="long" />
@@ -188,6 +189,10 @@
 		<field name="shareWithProfile" type="long" />
 		<field name="publishWithProfile" type="long" />
 		<field name="publishedProfile" type="String" />
+		<field name="version" type="double" />
+		<field name="lessonStatus" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusDate" type="Date" />
 	</model>
 	<model name="com.nyu.model.Lesson_Usergroups">
 		<field name="lessonId" type="long" />
@@ -210,6 +215,7 @@
 		<field name="modifiedDate" type="Date" />
 	</model>
 	<model name="com.nyu.model.NYUUserGroup">
+		<field name="uuid" type="String" />
 		<field name="userGroupId" type="long" />
 		<field name="companyId" type="long" />
 		<field name="groupId" type="long" />
@@ -225,9 +231,13 @@
 		<field name="administrators" type="String">
 			<hint name="max-length">10000</hint>
 		</field>
-		<field name="about" type="String">
+		<field name="about" type="String" localized="true">
 			<hint name="max-length">10000</hint>
 		</field>
+		<field name="title" type="String" localized="true" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusDate" type="Date" />
 	</model>
 	<model name="com.nyu.model.RequestLesson">
 		<field name="requestLessonId" type="long" />

@@ -1,0 +1,490 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.nyu.model.impl.AnswerRequestModelImpl">
+		<attributes>
+			<id name="answerId" />
+			<basic name="requestLessonId" />
+			<basic name="userId" />
+			<basic name="description" />
+			<basic name="appreciateUserIds" />
+			<basic name="appreciateCount" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="checkedAnswer" />
+			<basic name="opinionSurvey" />
+			<basic name="myLessons" />
+			<basic name="myFavouriteLessons" />
+			<basic name="collaborationLessons" />
+			<basic name="collaborationId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.nyu.model.impl.AuditReportModelImpl">
+		<attributes>
+			<id name="auditEventId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="eventType" />
+			<basic name="className" />
+			<basic name="classPK" />
+			<basic name="message" />
+			<basic name="clientHost" />
+			<basic name="clientIP" />
+			<basic name="serverName" />
+			<basic name="serverPort" />
+			<basic name="sessionID" />
+			<basic name="additionalInfo" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.nyu.model.impl.BasnoModelImpl">
+		<attributes>
+			<id name="badgeId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="badgeName" />
+			<basic name="badgeUrl" />
+			<basic name="description" />
+			<basic name="targetPoints" />
+			<basic name="createdDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createdBy" />
+			<basic name="updatedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="updatedBy" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.nyu.model.impl.DocumentFileModelImpl">
+		<attributes>
+			<id name="documentId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="lessonId" />
+			<basic name="sectionId" />
+			<basic name="documentName" />
+			<basic name="documentDesc" />
+			<basic name="documentPath" />
+			<basic name="resourceId" />
+			<basic name="collectionId" />
+			<basic name="resourceType" />
+			<basic name="downloadUrl" />
+			<basic name="docUuid" />
+			<basic name="hasAutoTranscript" />
+			<basic name="createdDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="permission" />
+			<basic name="status" />
+			<transient name="documentDescCurrentLanguageId" />
+			<transient name="documentDescMap" />
+			<transient name="documentNameCurrentLanguageId" />
+			<transient name="documentNameMap" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.nyu.model.impl.DocumentSectionModelImpl">
+		<attributes>
+			<id name="id">
+				<column name="ID_" />
+			</id>
+			<basic name="lessonId" />
+			<basic name="documentId" />
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="sectionTitle" />
+			<basic name="sectionNote" />
+			<basic name="lessonObjectiveIds" />
+			<basic name="order">
+				<column name="ORDER_" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.nyu.model.impl.FavouriteLessonsModelImpl">
+		<id-class class="com.nyu.service.persistence.FavouriteLessonsPK" />
+		<attributes>
+			<id name="userId" />
+			<id name="lessonId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.nyu.model.impl.KeywordsModelImpl">
+		<attributes>
+			<id name="id">
+				<column name="ID_" />
+			</id>
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="keyword" />
+			<basic name="description" />
+			<basic name="createdDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createdBy" />
+			<basic name="updatedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="updatedBy" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.nyu.model.impl.KeywordsCollaborationModelImpl">
+		<attributes>
+			<id name="id">
+				<column name="ID_" />
+			</id>
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="keywordId" />
+			<basic name="keywordName" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="status" />
+			<basic name="createdDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="markAs" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.nyu.model.impl.LessonModelImpl">
+		<attributes>
+			<id name="lessonId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="lessonName" />
+			<basic name="description" />
+			<basic name="author" />
+			<basic name="courseId" />
+			<basic name="appreciatedUserIds" />
+			<basic name="appreciateCount" />
+			<basic name="uploadedTime">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="uploadedById" />
+			<basic name="uploadedByName" />
+			<basic name="lessonNote" />
+			<basic name="status" />
+			<basic name="requestLessonId" />
+			<basic name="lessonPrivacy" />
+			<basic name="featured">
+				<column name="FEATURED_" />
+			</basic>
+			<basic name="creator" />
+			<basic name="secondaryAuthor" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createBy" />
+			<basic name="updatedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="updatedBy" />
+			<basic name="permission" />
+			<basic name="markedAs" />
+			<basic name="markedBy" />
+			<basic name="markedContent" />
+			<basic name="currentAuthor" />
+			<basic name="shareWithProfile" />
+			<basic name="publishWithProfile" />
+			<basic name="publishedProfile" />
+			<basic name="version" />
+			<basic name="lessonStatus" />
+			<basic name="statusByUserId" />
+			<basic name="statusDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="creatorCurrentLanguageId" />
+			<transient name="creatorMap" />
+			<transient name="descriptionCurrentLanguageId" />
+			<transient name="descriptionMap" />
+			<transient name="lessonNameCurrentLanguageId" />
+			<transient name="lessonNameMap" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="statusByUserUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.nyu.model.impl.Lesson_UsergroupsModelImpl">
+		<id-class class="com.nyu.service.persistence.Lesson_UsergroupsPK" />
+		<attributes>
+			<id name="lessonId" />
+			<id name="groupId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.nyu.model.impl.LessonCollaborationModelImpl">
+		<attributes>
+			<id name="id">
+				<column name="ID_" />
+			</id>
+			<basic name="lessonId" />
+			<basic name="userId" />
+			<basic name="memberStatus" />
+			<basic name="type">
+				<column name="TYPE_" />
+			</basic>
+			<basic name="accessPermission" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.nyu.model.impl.LessonObjectivesModelImpl">
+		<attributes>
+			<id name="id">
+				<column name="ID_" />
+			</id>
+			<basic name="lessonId" />
+			<basic name="objective" />
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="objectiveCurrentLanguageId" />
+			<transient name="objectiveMap" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.nyu.model.impl.NYUUserGroupModelImpl">
+		<attributes>
+			<id name="userGroupId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="groupPrivacy" />
+			<basic name="appreciatedUserIds" />
+			<basic name="appreciateCount" />
+			<basic name="createdDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createdBy" />
+			<basic name="updatedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="updatedBy" />
+			<basic name="administrators" />
+			<basic name="about" />
+			<basic name="title" />
+			<basic name="status" />
+			<basic name="statusByUserId" />
+			<basic name="statusDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="aboutCurrentLanguageId" />
+			<transient name="aboutMap" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="statusByUserUuid" />
+			<transient name="titleCurrentLanguageId" />
+			<transient name="titleMap" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.nyu.model.impl.RequestLessonModelImpl">
+		<attributes>
+			<id name="requestLessonId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="name" />
+			<basic name="description" />
+			<basic name="relatedLink" />
+			<basic name="priority" />
+			<basic name="createdBy" />
+			<basic name="createdDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="acceptedBy" />
+			<basic name="status" />
+			<basic name="appreciatedUserIds" />
+			<basic name="lastActivity">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="acceptedNote" />
+			<basic name="answerType" />
+			<basic name="sendTo" />
+			<basic name="opnionSurveyLink" />
+			<basic name="surveyOptions" />
+			<transient name="acceptedNoteCurrentLanguageId" />
+			<transient name="acceptedNoteMap" />
+			<transient name="descriptionCurrentLanguageId" />
+			<transient name="descriptionMap" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.nyu.model.impl.SlidesModelImpl">
+		<attributes>
+			<id name="id">
+				<column name="ID_" />
+			</id>
+			<basic name="description" />
+			<basic name="descPosition" />
+			<basic name="imageLink" />
+			<basic name="createdDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createdBy" />
+			<basic name="updatedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="updatedBy" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.nyu.model.impl.UserBadgesModelImpl">
+		<attributes>
+			<id name="userBadgeId" />
+			<basic name="userId" />
+			<basic name="badgeId" />
+			<basic name="badgeUrl" />
+			<basic name="createdDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.nyu.model.impl.UserGroupRequestModelImpl">
+		<attributes>
+			<id name="id">
+				<column name="ID_" />
+			</id>
+			<basic name="userGroupId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="userGroupOwner" />
+			<basic name="requestDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="requestedBy" />
+			<basic name="status" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.nyu.model.impl.AnswerRequestImpl" name="AnswerRequest">
+		<table name="nyyou_AnswerRequest" />
+		<attributes />
+	</entity>
+	<entity class="com.nyu.model.impl.AuditReportImpl" name="AuditReport">
+		<table name="nyyou_AuditReport" />
+		<attributes />
+	</entity>
+	<entity class="com.nyu.model.impl.BasnoImpl" name="Basno">
+		<table name="nyyou_Basno" />
+		<attributes />
+	</entity>
+	<entity class="com.nyu.model.impl.DocumentFileImpl" name="DocumentFile">
+		<table name="nyyou_DocumentFile" />
+		<attributes />
+	</entity>
+	<entity class="com.nyu.model.impl.DocumentSectionImpl" name="DocumentSection">
+		<table name="nyyou_DocumentSection" />
+		<attributes />
+	</entity>
+	<entity class="com.nyu.model.impl.FavouriteLessonsImpl" name="FavouriteLessons">
+		<table name="nyyou_FavouriteLessons" />
+		<attributes />
+	</entity>
+	<entity class="com.nyu.model.impl.KeywordsImpl" name="Keywords">
+		<table name="nyyou_Keywords" />
+		<attributes />
+	</entity>
+	<entity class="com.nyu.model.impl.KeywordsCollaborationImpl" name="KeywordsCollaboration">
+		<table name="nyyou_KeywordsCollaboration" />
+		<attributes />
+	</entity>
+	<entity class="com.nyu.model.impl.LessonImpl" name="Lesson">
+		<table name="nyyou_Lesson" />
+		<attributes />
+	</entity>
+	<entity class="com.nyu.model.impl.Lesson_UsergroupsImpl" name="Lesson_Usergroups">
+		<table name="nyyou_Lesson_Usergroups" />
+		<attributes />
+	</entity>
+	<entity class="com.nyu.model.impl.LessonCollaborationImpl" name="LessonCollaboration">
+		<table name="nyyou_LessonCollaboration" />
+		<attributes />
+	</entity>
+	<entity class="com.nyu.model.impl.LessonObjectivesImpl" name="LessonObjectives">
+		<table name="nyyou_LessonObjectives" />
+		<attributes />
+	</entity>
+	<entity class="com.nyu.model.impl.NYUUserGroupImpl" name="NYUUserGroup">
+		<table name="nyyou_NYUUserGroup" />
+		<attributes />
+	</entity>
+	<entity class="com.nyu.model.impl.RequestLessonImpl" name="RequestLesson">
+		<table name="nyyou_RequestLesson" />
+		<attributes />
+	</entity>
+	<entity class="com.nyu.model.impl.SlidesImpl" name="Slides">
+		<table name="nyyou_Slides" />
+		<attributes />
+	</entity>
+	<entity class="com.nyu.model.impl.UserBadgesImpl" name="UserBadges">
+		<table name="nyyou_UserBadges" />
+		<attributes />
+	</entity>
+	<entity class="com.nyu.model.impl.UserGroupRequestImpl" name="UserGroupRequest">
+		<table name="nyyou_UserGroupRequest" />
+		<attributes />
+	</entity>
+</entity-mappings>

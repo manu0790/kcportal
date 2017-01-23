@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.nyu.service.AnswerRequestLocalService" class="com.nyu.service.impl.AnswerRequestLocalServiceImpl" />
+	<bean id="com.nyu.service.persistence.AnswerRequestPersistence" class="com.nyu.service.persistence.AnswerRequestPersistenceImpl" parent="basePersistence" />
+	<bean id="com.nyu.service.AuditReportLocalService" class="com.nyu.service.impl.AuditReportLocalServiceImpl" />
+	<bean id="com.nyu.service.persistence.AuditReportPersistence" class="com.nyu.service.persistence.AuditReportPersistenceImpl" parent="basePersistence" />
+	<bean id="com.nyu.service.BasnoLocalService" class="com.nyu.service.impl.BasnoLocalServiceImpl" />
+	<bean id="com.nyu.service.persistence.BasnoPersistence" class="com.nyu.service.persistence.BasnoPersistenceImpl" parent="basePersistence" />
+	<bean id="com.nyu.service.DocumentFileLocalService" class="com.nyu.service.impl.DocumentFileLocalServiceImpl" />
+	<bean id="com.nyu.service.persistence.DocumentFilePersistence" class="com.nyu.service.persistence.DocumentFilePersistenceImpl" parent="basePersistence" />
+	<bean id="com.nyu.service.DocumentSectionLocalService" class="com.nyu.service.impl.DocumentSectionLocalServiceImpl" />
+	<bean id="com.nyu.service.persistence.DocumentSectionPersistence" class="com.nyu.service.persistence.DocumentSectionPersistenceImpl" parent="basePersistence" />
+	<bean id="com.nyu.service.FavouriteLessonsLocalService" class="com.nyu.service.impl.FavouriteLessonsLocalServiceImpl" />
+	<bean id="com.nyu.service.persistence.FavouriteLessonsPersistence" class="com.nyu.service.persistence.FavouriteLessonsPersistenceImpl" parent="basePersistence" />
+	<bean id="com.nyu.service.KeywordsLocalService" class="com.nyu.service.impl.KeywordsLocalServiceImpl" />
+	<bean id="com.nyu.service.persistence.KeywordsPersistence" class="com.nyu.service.persistence.KeywordsPersistenceImpl" parent="basePersistence" />
+	<bean id="com.nyu.service.KeywordsCollaborationLocalService" class="com.nyu.service.impl.KeywordsCollaborationLocalServiceImpl" />
+	<bean id="com.nyu.service.persistence.KeywordsCollaborationPersistence" class="com.nyu.service.persistence.KeywordsCollaborationPersistenceImpl" parent="basePersistence" />
+	<bean id="com.nyu.service.LessonLocalService" class="com.nyu.service.impl.LessonLocalServiceImpl" />
+	<bean id="com.nyu.service.persistence.LessonPersistence" class="com.nyu.service.persistence.LessonPersistenceImpl" parent="basePersistence" />
+	<bean id="com.nyu.service.persistence.LessonFinder" class="com.nyu.service.persistence.LessonFinderImpl" parent="basePersistence" />
+	<bean id="com.nyu.service.Lesson_UsergroupsLocalService" class="com.nyu.service.impl.Lesson_UsergroupsLocalServiceImpl" />
+	<bean id="com.nyu.service.persistence.Lesson_UsergroupsPersistence" class="com.nyu.service.persistence.Lesson_UsergroupsPersistenceImpl" parent="basePersistence" />
+	<bean id="com.nyu.service.LessonCollaborationLocalService" class="com.nyu.service.impl.LessonCollaborationLocalServiceImpl" />
+	<bean id="com.nyu.service.persistence.LessonCollaborationPersistence" class="com.nyu.service.persistence.LessonCollaborationPersistenceImpl" parent="basePersistence" />
+	<bean id="com.nyu.service.LessonObjectivesLocalService" class="com.nyu.service.impl.LessonObjectivesLocalServiceImpl" />
+	<bean id="com.nyu.service.persistence.LessonObjectivesPersistence" class="com.nyu.service.persistence.LessonObjectivesPersistenceImpl" parent="basePersistence" />
+	<bean id="com.nyu.service.NYUUserGroupLocalService" class="com.nyu.service.impl.NYUUserGroupLocalServiceImpl" />
+	<bean id="com.nyu.service.persistence.NYUUserGroupPersistence" class="com.nyu.service.persistence.NYUUserGroupPersistenceImpl" parent="basePersistence" />
+	<bean id="com.nyu.service.persistence.NYUUserGroupFinder" class="com.nyu.service.persistence.NYUUserGroupFinderImpl" parent="basePersistence" />
+	<bean id="com.nyu.service.RequestLessonLocalService" class="com.nyu.service.impl.RequestLessonLocalServiceImpl" />
+	<bean id="com.nyu.service.persistence.RequestLessonPersistence" class="com.nyu.service.persistence.RequestLessonPersistenceImpl" parent="basePersistence" />
+	<bean id="com.nyu.service.persistence.RequestLessonFinder" class="com.nyu.service.persistence.RequestLessonFinderImpl" parent="basePersistence" />
+	<bean id="com.nyu.service.SlidesLocalService" class="com.nyu.service.impl.SlidesLocalServiceImpl" />
+	<bean id="com.nyu.service.persistence.SlidesPersistence" class="com.nyu.service.persistence.SlidesPersistenceImpl" parent="basePersistence" />
+	<bean id="com.nyu.service.UserBadgesLocalService" class="com.nyu.service.impl.UserBadgesLocalServiceImpl" />
+	<bean id="com.nyu.service.persistence.UserBadgesPersistence" class="com.nyu.service.persistence.UserBadgesPersistenceImpl" parent="basePersistence" />
+	<bean id="com.nyu.service.UserGroupRequestLocalService" class="com.nyu.service.impl.UserGroupRequestLocalServiceImpl" />
+	<bean id="com.nyu.service.persistence.UserGroupRequestPersistence" class="com.nyu.service.persistence.UserGroupRequestPersistenceImpl" parent="basePersistence" />
+</beans>
