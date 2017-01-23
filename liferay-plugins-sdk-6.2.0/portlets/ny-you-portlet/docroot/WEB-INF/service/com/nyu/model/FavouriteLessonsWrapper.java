@@ -217,7 +217,7 @@ public class FavouriteLessonsWrapper implements FavouriteLessons,
 	}
 
 	@Override
-	public int compareTo(FavouriteLessons favouriteLessons) {
+	public int compareTo(com.nyu.model.FavouriteLessons favouriteLessons) {
 		return _favouriteLessons.compareTo(favouriteLessons);
 	}
 
@@ -227,17 +227,17 @@ public class FavouriteLessonsWrapper implements FavouriteLessons,
 	}
 
 	@Override
-	public com.liferay.portal.model.CacheModel<FavouriteLessons> toCacheModel() {
+	public com.liferay.portal.model.CacheModel<com.nyu.model.FavouriteLessons> toCacheModel() {
 		return _favouriteLessons.toCacheModel();
 	}
 
 	@Override
-	public FavouriteLessons toEscapedModel() {
+	public com.nyu.model.FavouriteLessons toEscapedModel() {
 		return new FavouriteLessonsWrapper(_favouriteLessons.toEscapedModel());
 	}
 
 	@Override
-	public FavouriteLessons toUnescapedModel() {
+	public com.nyu.model.FavouriteLessons toUnescapedModel() {
 		return new FavouriteLessonsWrapper(_favouriteLessons.toUnescapedModel());
 	}
 

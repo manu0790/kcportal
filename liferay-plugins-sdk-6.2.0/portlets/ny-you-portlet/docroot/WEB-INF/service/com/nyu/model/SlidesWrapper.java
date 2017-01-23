@@ -356,7 +356,7 @@ public class SlidesWrapper implements Slides, ModelWrapper<Slides> {
 	}
 
 	@Override
-	public int compareTo(Slides slides) {
+	public int compareTo(com.nyu.model.Slides slides) {
 		return _slides.compareTo(slides);
 	}
 
@@ -366,17 +366,17 @@ public class SlidesWrapper implements Slides, ModelWrapper<Slides> {
 	}
 
 	@Override
-	public com.liferay.portal.model.CacheModel<Slides> toCacheModel() {
+	public com.liferay.portal.model.CacheModel<com.nyu.model.Slides> toCacheModel() {
 		return _slides.toCacheModel();
 	}
 
 	@Override
-	public Slides toEscapedModel() {
+	public com.nyu.model.Slides toEscapedModel() {
 		return new SlidesWrapper(_slides.toEscapedModel());
 	}
 
 	@Override
-	public Slides toUnescapedModel() {
+	public com.nyu.model.Slides toUnescapedModel() {
 		return new SlidesWrapper(_slides.toUnescapedModel());
 	}
 

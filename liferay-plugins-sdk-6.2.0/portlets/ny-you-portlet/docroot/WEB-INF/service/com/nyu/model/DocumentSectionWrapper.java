@@ -357,7 +357,7 @@ public class DocumentSectionWrapper implements DocumentSection,
 	}
 
 	@Override
-	public int compareTo(DocumentSection documentSection) {
+	public int compareTo(com.nyu.model.DocumentSection documentSection) {
 		return _documentSection.compareTo(documentSection);
 	}
 
@@ -367,17 +367,17 @@ public class DocumentSectionWrapper implements DocumentSection,
 	}
 
 	@Override
-	public com.liferay.portal.model.CacheModel<DocumentSection> toCacheModel() {
+	public com.liferay.portal.model.CacheModel<com.nyu.model.DocumentSection> toCacheModel() {
 		return _documentSection.toCacheModel();
 	}
 
 	@Override
-	public DocumentSection toEscapedModel() {
+	public com.nyu.model.DocumentSection toEscapedModel() {
 		return new DocumentSectionWrapper(_documentSection.toEscapedModel());
 	}
 
 	@Override
-	public DocumentSection toUnescapedModel() {
+	public com.nyu.model.DocumentSection toUnescapedModel() {
 		return new DocumentSectionWrapper(_documentSection.toUnescapedModel());
 	}
 

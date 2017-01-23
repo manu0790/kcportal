@@ -15,9 +15,14 @@
 	<classpathentry kind="lib" path="/portal-master/util-bridges/util-bridges.jar"/>
 	<classpathentry kind="lib" path="/portal-master/util-java/util-java.jar"/>
 	<classpathentry kind="lib" path="/portal-master/util-taglib/util-taglib.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/com.liferay.ide.eclipse.server.tomcat.runtimeClasspathProvider/Liferay v6.2 CE (Tomcat 7)">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="con" path="com.liferay.ide.sdk.container">
+	<classpathentry kind="con" path="com.liferay.ide.eclipse.server.plugin.container/web">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>

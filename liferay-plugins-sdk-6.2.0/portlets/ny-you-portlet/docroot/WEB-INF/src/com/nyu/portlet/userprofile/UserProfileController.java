@@ -139,6 +139,12 @@ public class UserProfileController {
 		
 		user.getExpandoBridge().setAttribute(Constant.EXPANDO_FIELD_ANONYMOUS_USER, ParamUtil.getString(request, Constant.COMMON_EXPANDO_ATTRIBUTE_ANONUMOUS_USER));
 		user.getExpandoBridge().setAttribute(Constant.EXPANDO_FIELD_AUTHOR_INFO, ParamUtil.getString(request, Constant.COMMON_EXPANDO_ATTRIBUTE_AUTHOR_INFO));
+		user.getExpandoBridge().setAttribute(Constant.EXPANDO_FIELD_MARITAL_STATUS, ParamUtil.getString(request, Constant.COMMON_EXPANDO_ATTRIBUTE_MARITAL_STATUS));
+		user.getExpandoBridge().setAttribute(Constant.EXPANDO_FIELD_RACE, ParamUtil.getString(request, Constant.COMMON_EXPANDO_ATTRIBUTE_RACE));
+		user.getExpandoBridge().setAttribute(Constant.EXPANDO_FIELD_ANNUAL_INCOME, ParamUtil.getString(request, Constant.COMMON_EXPANDO_ATTRIBUTE_ANNUAL_INCOME));
+		user.getExpandoBridge().setAttribute(Constant.EXPANDO_FIELD_HEALTH_INSURANCE, ParamUtil.getString(request, Constant.COMMON_EXPANDO_ATTRIBUTE_HEATH_INSURANCE));
+		user.getExpandoBridge().setAttribute(Constant.EXPANDO_FIELD_HIGHEST_EDUCATION, ParamUtil.getString(request, Constant.COMMON_EXPANDO_ATTRIBUTE_HIGHEST_EDUCATION));
+		user.getExpandoBridge().setAttribute(Constant.EXPANDO_FIELD_ZIPCODE, ParamUtil.getString(request, Constant.COMMON_EXPANDO_ATTRIBUTE_ZIPCODE));
 		
 		if(Constant.IS_FOR_VENDOR){			//condition by asif 
 			user.getExpandoBridge().setAttribute(Constant.EXPANDO_FIELD_YEAR_OF_PASSING, ParamUtil.getString(request, Constant.COMMON_EXPANDO_ATTRIBUTE_YEAR_OF_PASSING));

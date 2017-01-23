@@ -16,10 +16,7 @@ package com.nyu.service.impl;
 
 import java.util.List;
 
-import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.model.UserGroup;
-import com.liferay.portal.service.persistence.UserGroupFinderUtil;
-import com.nyu.model.Lesson;
 import com.nyu.service.base.NYUUserGroupLocalServiceBaseImpl;
 
 /**
@@ -47,6 +44,5 @@ public class NYUUserGroupLocalServiceImpl
 	public List<UserGroup> findUserGroupByType(int start, int end){
 		return nyuUserGroupFinder.findUserGroupByType(-1, -1);
 	}
-	
 	
 }

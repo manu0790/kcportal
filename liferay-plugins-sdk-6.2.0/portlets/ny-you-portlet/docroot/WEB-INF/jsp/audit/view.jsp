@@ -17,6 +17,12 @@
 <portlet:param name="action" value="auditSearch"/>
 </portlet:actionURL>
 
+<portlet:resourceURL id="exportReport" var="generateReportURL" >
+	<portlet:param name="eventType" value="${eventType}"/>
+	<portlet:param name="fromDate" value="${fromDate}"/>
+	<portlet:param name="toDate" value="${toDate}"/>
+</portlet:resourceURL>
+
 <div class="container" id="audit-search">
 	<div class="row-fluid">
 		<form name='<portlet:namespace/>search' action="<%=auditSearch%>" method="post" onsubmit="event.preventDefault();<portlet:namespace/>ValidateOnSubmit(this)">
@@ -43,7 +49,8 @@
 			</span>
 			<span class="span3">
 				<input type="submit" class="btn btn-primary" value='<liferay-ui:message key="search" />'>
-				<button class="btn btn-primary  generate-report" onClick="event.preventDefault();<portlet:namespace/>reportPopupWindow();"><liferay-ui:message key="generate-report" /></button>
+				<%-- onClick="event.preventDefault();<portlet:namespace/>reportPopupWindow();" --%>
+				<a href="<%=generateReportURL.toString()%>" class="btn btn-primary  generate-report" ><liferay-ui:message key="generate-report" /></a>
 			</span>
 		</form>
 	</div>
@@ -172,11 +179,11 @@
  }
  
  function <portlet:namespace/>reportPopupWindow() {
-	    var w = 800;
-	    var h = 500;
-	    var left = (screen.width/2)-(w/2);
-	    var top = (screen.height/2)-(h/2);
-	    var url = '${generateReportURL}';
-	    return window.open(url, '_blank', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+    var w = 800;
+    var h = 500;
+    var left = (screen.width/2)-(w/2);
+    var top = (screen.height/2)-(h/2);
+    var url = '${generateReportURL}';
+    return window.open(url, '_blank', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
 }
 </script>

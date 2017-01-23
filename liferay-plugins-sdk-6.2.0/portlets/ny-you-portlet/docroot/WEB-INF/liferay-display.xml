@@ -24,4 +24,7 @@
 	</category>
 
 
+	<category name="category.sample">
+		<portlet id="signup-controller"></portlet>
+	</category>
 </display>

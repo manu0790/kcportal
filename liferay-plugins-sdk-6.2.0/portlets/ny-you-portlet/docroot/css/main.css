@@ -416,3 +416,9 @@ span.fullScreenFunctionality i{
     POSITION: absolute;
     RIGHT: 35%;
 }   
+
+.bottom_right {
+    bottom: 10px;
+    position: absolute;
+    right: 0;
+}

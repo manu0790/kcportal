@@ -66,7 +66,7 @@ String lessonDescription = (String)pageContext.getAttribute("lessonDescription")
 						    if(categoriesList.length > 0){
 						    	for (String st : categoriesList) { 
 						    		sb.append(st).append(',').append(' ');
-						   	 }
+						   	 	}
 						    	if (categoriesList.length != 0) sb.deleteCharAt(sb.length()-2);{
 						    		if(sb.toString().length()>50)
 							    		out.println(sb.toString().substring(0,50)+"...");

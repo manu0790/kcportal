@@ -1403,8 +1403,22 @@ public class RequestLessonController  {
 		mailMessage.setBody(message);
 		mailMessage.setSubject(subject);
 		MailServiceUtil.sendEmail(mailMessage);
-		response.getWriter().write(CommonUtil.JavaClassI18N(request, themeDisplay, "send-email-successfully")+ toAddress);
+		response.getWriter().write(CommonUtil.JavaClassI18N(request, themeDisplay, "send-email-successfully")+" to "+getAddresses(toAddress));
 		 
+	}
+	
+	private String getAddresses(String[] toAddresses) {
+		StringBuilder sb = new StringBuilder();
+		int count = 1;
+		for(String emailAddress: toAddresses){
+			sb.append(emailAddress);
+			if(count < toAddresses.length)
+				sb.append(", ");
+			
+			count++;
+		}
+		return sb.toString();
+		
 	}
 	
 	@ResourceMapping(value="deleteLinkedLesson")

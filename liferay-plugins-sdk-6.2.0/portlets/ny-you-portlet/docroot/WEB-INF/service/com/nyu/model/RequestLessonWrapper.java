@@ -904,7 +904,7 @@ public class RequestLessonWrapper implements RequestLesson,
 	}
 
 	@Override
-	public int compareTo(RequestLesson requestLesson) {
+	public int compareTo(com.nyu.model.RequestLesson requestLesson) {
 		return _requestLesson.compareTo(requestLesson);
 	}
 
@@ -914,17 +914,17 @@ public class RequestLessonWrapper implements RequestLesson,
 	}
 
 	@Override
-	public com.liferay.portal.model.CacheModel<RequestLesson> toCacheModel() {
+	public com.liferay.portal.model.CacheModel<com.nyu.model.RequestLesson> toCacheModel() {
 		return _requestLesson.toCacheModel();
 	}
 
 	@Override
-	public RequestLesson toEscapedModel() {
+	public com.nyu.model.RequestLesson toEscapedModel() {
 		return new RequestLessonWrapper(_requestLesson.toEscapedModel());
 	}
 
 	@Override
-	public RequestLesson toUnescapedModel() {
+	public com.nyu.model.RequestLesson toUnescapedModel() {
 		return new RequestLessonWrapper(_requestLesson.toUnescapedModel());
 	}
 

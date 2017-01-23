@@ -125,6 +125,7 @@ public class PublishListener implements MessageListener {
 		List<DocumentFile> documentFiles = null;
 		List<MediaMetaData> mediaMetaDataList = new ArrayList<MediaMetaData>();
 		List<String> SupportedPreviewFormat = Arrays.asList(Constant.EXPLICIT_PREVIEW_FORMATS.split(","));
+		//System.out.println("-------SupportedPreviewFormat------>"+SupportedPreviewFormat);
 		MediaMetaData mediaMetaData = null;
 		String damSecretKey = Constant.PORTLET_PROP_DAM_SECRET_KEY;
 		String LessonPublishStatus =Constant.FAILED;

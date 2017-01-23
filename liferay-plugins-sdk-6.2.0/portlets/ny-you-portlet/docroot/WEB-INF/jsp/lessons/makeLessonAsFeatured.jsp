@@ -8,7 +8,6 @@
 <%@page import="java.util.Set"%>
 <%@page import="com.liferay.portal.service.ClassNameLocalServiceUtil"%>
 <%@page import="com.nyu.util.CommonUtil"%>
-<%@page import="com.nyu.model.Lesson"%>
 <%@ include file="/WEB-INF/jsp/init.jsp" %>
 <script src='<%=themeDisplay.getPathThemeJavaScript()%>/jquery/jquery-1.11.0.min.js' type="text/javascript"></script> 
 <portlet:actionURL var="processFeaturedLessonUrl" name="processFeaturedLesson">
@@ -29,10 +28,10 @@
 List<AssetCategory> categories = null;
 	List<AssetVocabulary> vocabularies = null;
 	List<AssetTag> tags=null;
-	vocabularies = AssetVocabularyLocalServiceUtil.getGroupVocabularies(scopeGroupId, Constant.SITE_NAME, 0, 1, null);
+	vocabularies = AssetVocabularyLocalServiceUtil.getGroupVocabularies(scopeGroupId, Constant.CATEGORY_VOCABULARY, 0, 1, null);
 	if(vocabularies!=null && vocabularies.size()>0){
 		categories = AssetCategoryLocalServiceUtil.getVocabularyRootCategories(vocabularies.get(0).getVocabularyId(), 0, vocabularies.get(0).getCategories().size(), null);
-		tags=AssetTagLocalServiceUtil.getGroupTags(scopeGroupId);
+		tags = AssetTagLocalServiceUtil.getGroupTags(scopeGroupId);
 	}%>
 <div style="padding:15px;">		
 <div class="filter-form span6">

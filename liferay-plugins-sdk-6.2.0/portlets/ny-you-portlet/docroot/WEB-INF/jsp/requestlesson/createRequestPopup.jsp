@@ -352,7 +352,10 @@ request.setAttribute("singleSelect",Constant.COMMON_STRING_CONSTANT_TRUE); //cat
 	});
  
 	
-	$("body").on("change", "#<portlet:namespace/>categoriesContent .categoryIsSelected", function(e){
+		
+	// this function is commented to enable multiple category selection ---- By manu
+	
+	/* $("body").on("change", "#<portlet:namespace/>categoriesContent .categoryIsSelected", function(e){
 		$('#<portlet:namespace/>categoriesContent .categoryIsSelected').each(function(i){
     		$(this)[0].checked = false;
         });
@@ -360,8 +363,9 @@ request.setAttribute("singleSelect",Constant.COMMON_STRING_CONSTANT_TRUE); //cat
 		var selectedCateItems ="<li class='textboxlistentry'>"+$(this).attr('name')+"</li>";
 		$("#<portlet:namespace/>categoriesContent .modal-header ul").remove();
 	    $("#<portlet:namespace/>categoriesContent .modal-header").append('<ul class="textboxlistentry-holder clearfix ny-you-category unstyled">'+selectedCateItems+'</ul>');
-	});
+	}); */
 	
+	//------------- end----------------//
 	
 	
 	function qualtricPopupWindow(uri) {

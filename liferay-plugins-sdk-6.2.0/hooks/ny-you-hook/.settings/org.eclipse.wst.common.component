@@ -2,6 +2,9 @@
     <wb-module deploy-name="ny-you-hook">
         <wb-resource deploy-path="/" source-path="/docroot" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/docroot/WEB-INF/src"/>
+        <dependent-module archiveName="ny-you-portlet-service.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/ny-you-portlet/docroot/WEB-INF/lib/ny-you-portlet-service.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="ny-you-hook"/>
         <property name="java-output-path" value="/ny-you-hook/docroot/WEB-INF/classes"/>
     </wb-module>

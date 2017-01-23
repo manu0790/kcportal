@@ -151,7 +151,8 @@ public interface Lesson_UsergroupsPersistence extends BasePersistence<Lesson_Use
 	* @throws SystemException if a system exception occurred
 	*/
 	public com.nyu.model.Lesson_Usergroups[] findBylessonsByGroupId_PrevAndNext(
-		Lesson_UsergroupsPK lesson_UsergroupsPK, long groupId,
+		com.nyu.service.persistence.Lesson_UsergroupsPK lesson_UsergroupsPK,
+		long groupId,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			com.nyu.NoSuchLesson_UsergroupsException;
@@ -289,7 +290,8 @@ public interface Lesson_UsergroupsPersistence extends BasePersistence<Lesson_Use
 	* @throws SystemException if a system exception occurred
 	*/
 	public com.nyu.model.Lesson_Usergroups[] findBygroupsByLessonId_PrevAndNext(
-		Lesson_UsergroupsPK lesson_UsergroupsPK, long lessonId,
+		com.nyu.service.persistence.Lesson_UsergroupsPK lesson_UsergroupsPK,
+		long lessonId,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			com.nyu.NoSuchLesson_UsergroupsException;
@@ -335,7 +337,7 @@ public interface Lesson_UsergroupsPersistence extends BasePersistence<Lesson_Use
 	* @return the new lesson_ usergroups
 	*/
 	public com.nyu.model.Lesson_Usergroups create(
-		Lesson_UsergroupsPK lesson_UsergroupsPK);
+		com.nyu.service.persistence.Lesson_UsergroupsPK lesson_UsergroupsPK);
 
 	/**
 	* Removes the lesson_ usergroups with the primary key from the database. Also notifies the appropriate model listeners.
@@ -346,7 +348,7 @@ public interface Lesson_UsergroupsPersistence extends BasePersistence<Lesson_Use
 	* @throws SystemException if a system exception occurred
 	*/
 	public com.nyu.model.Lesson_Usergroups remove(
-		Lesson_UsergroupsPK lesson_UsergroupsPK)
+		com.nyu.service.persistence.Lesson_UsergroupsPK lesson_UsergroupsPK)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			com.nyu.NoSuchLesson_UsergroupsException;
 
@@ -363,7 +365,7 @@ public interface Lesson_UsergroupsPersistence extends BasePersistence<Lesson_Use
 	* @throws SystemException if a system exception occurred
 	*/
 	public com.nyu.model.Lesson_Usergroups findByPrimaryKey(
-		Lesson_UsergroupsPK lesson_UsergroupsPK)
+		com.nyu.service.persistence.Lesson_UsergroupsPK lesson_UsergroupsPK)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			com.nyu.NoSuchLesson_UsergroupsException;
 
@@ -375,7 +377,7 @@ public interface Lesson_UsergroupsPersistence extends BasePersistence<Lesson_Use
 	* @throws SystemException if a system exception occurred
 	*/
 	public com.nyu.model.Lesson_Usergroups fetchByPrimaryKey(
-		Lesson_UsergroupsPK lesson_UsergroupsPK)
+		com.nyu.service.persistence.Lesson_UsergroupsPK lesson_UsergroupsPK)
 		throws com.liferay.portal.kernel.exception.SystemException;
 
 	/**

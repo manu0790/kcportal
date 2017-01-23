@@ -584,8 +584,8 @@ $('.userAccess').on('change',function(){
 	});
 });
 
-
-$('#addComment').on('click',function(){ 
+// does not require comment fucntionality
+/* $('#addComment').on('click',function(){ 
 	var commentDescription = $('#inputComment').val();
 	var newComment = '';
 	$("#enterCommentErrorId").hide();
@@ -621,7 +621,7 @@ $('#addComment').on('click',function(){
 	  		$('#inputComment').val("");
 		}
 	});	  
-});
+}); */
 
 
 $(function(){

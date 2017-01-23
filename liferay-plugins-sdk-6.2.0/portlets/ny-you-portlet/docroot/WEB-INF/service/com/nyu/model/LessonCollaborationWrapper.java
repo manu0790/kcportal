@@ -324,7 +324,7 @@ public class LessonCollaborationWrapper implements LessonCollaboration,
 	}
 
 	@Override
-	public int compareTo(LessonCollaboration lessonCollaboration) {
+	public int compareTo(com.nyu.model.LessonCollaboration lessonCollaboration) {
 		return _lessonCollaboration.compareTo(lessonCollaboration);
 	}
 
@@ -334,17 +334,17 @@ public class LessonCollaborationWrapper implements LessonCollaboration,
 	}
 
 	@Override
-	public com.liferay.portal.model.CacheModel<LessonCollaboration> toCacheModel() {
+	public com.liferay.portal.model.CacheModel<com.nyu.model.LessonCollaboration> toCacheModel() {
 		return _lessonCollaboration.toCacheModel();
 	}
 
 	@Override
-	public LessonCollaboration toEscapedModel() {
+	public com.nyu.model.LessonCollaboration toEscapedModel() {
 		return new LessonCollaborationWrapper(_lessonCollaboration.toEscapedModel());
 	}
 
 	@Override
-	public LessonCollaboration toUnescapedModel() {
+	public com.nyu.model.LessonCollaboration toUnescapedModel() {
 		return new LessonCollaborationWrapper(_lessonCollaboration.toUnescapedModel());
 	}
 

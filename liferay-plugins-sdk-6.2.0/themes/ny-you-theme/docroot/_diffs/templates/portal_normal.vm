@@ -41,7 +41,7 @@
 	#set ($VOID = $embeddedUserProfileURL.setPortletMode("view"))
 	
 	#set ($embeddedGenerateReportURL = $portletURLFactory.create($request, 'admin_WAR_nyyouportlet', $layout.plid, "RESOURCE_PHASE"))
-	#set ($VOID = $embeddedGenerateReportURL.setResourceID("generateReport"))
+	#set ($VOID = $embeddedGenerateReportURL.setResourceID("exportReport"))
 	#set ($VOID = $embeddedGenerateReportURL.setParameter("reportType","pdf"))
 	#set ($VOID = $embeddedGenerateReportURL.setPortletMode("view"))
 	

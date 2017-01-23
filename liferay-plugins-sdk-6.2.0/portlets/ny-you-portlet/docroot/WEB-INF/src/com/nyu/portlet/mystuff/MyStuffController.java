@@ -387,7 +387,7 @@ public class MyStuffController {
 			List<AssetCategory> categories = null;
 			List<AssetVocabulary> vocabularies = null;
 			List<AssetTag> tags=null;
-			vocabularies = AssetVocabularyLocalServiceUtil.getGroupVocabularies(themeDisplay.getScopeGroupId(), Constant.SITE_NAME, 0, 1, null);
+			vocabularies = AssetVocabularyLocalServiceUtil.getGroupVocabularies(themeDisplay.getScopeGroupId(), Constant.CATEGORY_VOCABULARY, 0, 1, null);
 			if(vocabularies!=null && vocabularies.size()>0){
 				categories = AssetCategoryLocalServiceUtil.getVocabularyRootCategories(vocabularies.get(0).getVocabularyId(), 0, vocabularies.get(0).getCategories().size(), null);
 				tags=AssetTagLocalServiceUtil.getGroupTags(themeDisplay.getScopeGroupId());

@@ -1344,8 +1344,9 @@ function customAlertForGroups(data,detailUrl,closePopOver){
 								/*if(closePopOver){
 									$('#popOverBodyCotent').hide();
 								}*/
+								
 								if(groupDetailUrl.trim().length>5){
-									window.location.href = groupDetailUrl;
+									//window.location.href = groupDetailUrl;
 								}
 							}
 						}

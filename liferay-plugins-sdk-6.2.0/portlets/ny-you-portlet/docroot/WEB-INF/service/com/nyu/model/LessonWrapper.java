@@ -1532,7 +1532,7 @@ public class LessonWrapper implements Lesson, ModelWrapper<Lesson> {
 	}
 
 	@Override
-	public int compareTo(Lesson lesson) {
+	public int compareTo(com.nyu.model.Lesson lesson) {
 		return _lesson.compareTo(lesson);
 	}
 
@@ -1542,17 +1542,17 @@ public class LessonWrapper implements Lesson, ModelWrapper<Lesson> {
 	}
 
 	@Override
-	public com.liferay.portal.model.CacheModel<Lesson> toCacheModel() {
+	public com.liferay.portal.model.CacheModel<com.nyu.model.Lesson> toCacheModel() {
 		return _lesson.toCacheModel();
 	}
 
 	@Override
-	public Lesson toEscapedModel() {
+	public com.nyu.model.Lesson toEscapedModel() {
 		return new LessonWrapper(_lesson.toEscapedModel());
 	}
 
 	@Override
-	public Lesson toUnescapedModel() {
+	public com.nyu.model.Lesson toUnescapedModel() {
 		return new LessonWrapper(_lesson.toUnescapedModel());
 	}
 

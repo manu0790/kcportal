@@ -437,7 +437,7 @@ public class BasnoWrapper implements Basno, ModelWrapper<Basno> {
 	}
 
 	@Override
-	public int compareTo(Basno basno) {
+	public int compareTo(com.nyu.model.Basno basno) {
 		return _basno.compareTo(basno);
 	}
 
@@ -447,17 +447,17 @@ public class BasnoWrapper implements Basno, ModelWrapper<Basno> {
 	}
 
 	@Override
-	public com.liferay.portal.model.CacheModel<Basno> toCacheModel() {
+	public com.liferay.portal.model.CacheModel<com.nyu.model.Basno> toCacheModel() {
 		return _basno.toCacheModel();
 	}
 
 	@Override
-	public Basno toEscapedModel() {
+	public com.nyu.model.Basno toEscapedModel() {
 		return new BasnoWrapper(_basno.toEscapedModel());
 	}
 
 	@Override
-	public Basno toUnescapedModel() {
+	public com.nyu.model.Basno toUnescapedModel() {
 		return new BasnoWrapper(_basno.toUnescapedModel());
 	}
 

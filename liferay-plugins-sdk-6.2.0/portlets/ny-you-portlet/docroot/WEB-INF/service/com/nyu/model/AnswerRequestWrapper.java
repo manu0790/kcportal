@@ -524,7 +524,7 @@ public class AnswerRequestWrapper implements AnswerRequest,
 	}
 
 	@Override
-	public int compareTo(AnswerRequest answerRequest) {
+	public int compareTo(com.nyu.model.AnswerRequest answerRequest) {
 		return _answerRequest.compareTo(answerRequest);
 	}
 
@@ -534,17 +534,17 @@ public class AnswerRequestWrapper implements AnswerRequest,
 	}
 
 	@Override
-	public com.liferay.portal.model.CacheModel<AnswerRequest> toCacheModel() {
+	public com.liferay.portal.model.CacheModel<com.nyu.model.AnswerRequest> toCacheModel() {
 		return _answerRequest.toCacheModel();
 	}
 
 	@Override
-	public AnswerRequest toEscapedModel() {
+	public com.nyu.model.AnswerRequest toEscapedModel() {
 		return new AnswerRequestWrapper(_answerRequest.toEscapedModel());
 	}
 
 	@Override
-	public AnswerRequest toUnescapedModel() {
+	public com.nyu.model.AnswerRequest toUnescapedModel() {
 		return new AnswerRequestWrapper(_answerRequest.toUnescapedModel());
 	}
 

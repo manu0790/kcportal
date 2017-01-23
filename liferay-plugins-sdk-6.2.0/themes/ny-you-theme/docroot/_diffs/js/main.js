@@ -125,7 +125,9 @@ AUI().use('aui-base','aui-delayed-task','liferay-poller',
 					var lessonArray=response.newlyPublishedList;
 					var content = "<ul class='unstyled'>";
 			        for(lesson in lessonArray){
-			        	content = content+"<li class='alert alert-warning'>Lesson <strong>"+lessonArray[lesson].lessonName+"</strong> is "+ lessonArray[lesson].type +". To view lesson <a class='btn btn-link' href='"+lessonArray[lesson].lessonUrl+"/-/lessons/browse/"+lessonArray[lesson].lessonId+"'>click here</a></li>"
+			        	content = content+"<li class='alert alert-warning'>Lesson <strong>"+lessonArray[lesson].lessonName+"</strong> is awaiting review and approval to view on the portal.</li>";
+			        	// removed by microexcel
+			        	// + lessonArray[lesson].type +". To view lesson <a class='btn btn-link' href='"+lessonArray[lesson].lessonUrl+"/-/lessons/browse/"+lessonArray[lesson].lessonId+"'>click here</a>
 			        }
 					content=content+"</ul>";
 					

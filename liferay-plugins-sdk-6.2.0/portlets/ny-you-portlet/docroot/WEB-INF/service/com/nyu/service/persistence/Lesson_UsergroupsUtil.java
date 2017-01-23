@@ -245,7 +245,8 @@ public class Lesson_UsergroupsUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static com.nyu.model.Lesson_Usergroups[] findBylessonsByGroupId_PrevAndNext(
-		Lesson_UsergroupsPK lesson_UsergroupsPK, long groupId,
+		com.nyu.service.persistence.Lesson_UsergroupsPK lesson_UsergroupsPK,
+		long groupId,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			com.nyu.NoSuchLesson_UsergroupsException {
@@ -411,7 +412,8 @@ public class Lesson_UsergroupsUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static com.nyu.model.Lesson_Usergroups[] findBygroupsByLessonId_PrevAndNext(
-		Lesson_UsergroupsPK lesson_UsergroupsPK, long lessonId,
+		com.nyu.service.persistence.Lesson_UsergroupsPK lesson_UsergroupsPK,
+		long lessonId,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			com.nyu.NoSuchLesson_UsergroupsException {
@@ -470,7 +472,7 @@ public class Lesson_UsergroupsUtil {
 	* @return the new lesson_ usergroups
 	*/
 	public static com.nyu.model.Lesson_Usergroups create(
-		Lesson_UsergroupsPK lesson_UsergroupsPK) {
+		com.nyu.service.persistence.Lesson_UsergroupsPK lesson_UsergroupsPK) {
 		return getPersistence().create(lesson_UsergroupsPK);
 	}
 
@@ -483,7 +485,7 @@ public class Lesson_UsergroupsUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static com.nyu.model.Lesson_Usergroups remove(
-		Lesson_UsergroupsPK lesson_UsergroupsPK)
+		com.nyu.service.persistence.Lesson_UsergroupsPK lesson_UsergroupsPK)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			com.nyu.NoSuchLesson_UsergroupsException {
 		return getPersistence().remove(lesson_UsergroupsPK);
@@ -504,7 +506,7 @@ public class Lesson_UsergroupsUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static com.nyu.model.Lesson_Usergroups findByPrimaryKey(
-		Lesson_UsergroupsPK lesson_UsergroupsPK)
+		com.nyu.service.persistence.Lesson_UsergroupsPK lesson_UsergroupsPK)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			com.nyu.NoSuchLesson_UsergroupsException {
 		return getPersistence().findByPrimaryKey(lesson_UsergroupsPK);
@@ -518,7 +520,7 @@ public class Lesson_UsergroupsUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static com.nyu.model.Lesson_Usergroups fetchByPrimaryKey(
-		Lesson_UsergroupsPK lesson_UsergroupsPK)
+		com.nyu.service.persistence.Lesson_UsergroupsPK lesson_UsergroupsPK)
 		throws com.liferay.portal.kernel.exception.SystemException {
 		return getPersistence().fetchByPrimaryKey(lesson_UsergroupsPK);
 	}

@@ -653,6 +653,39 @@
 			<role-name>user</role-name>
 		</security-role-ref>
 	</portlet>
+	<portlet>
+		<portlet-name>signup-controller</portlet-name>
+		<display-name>Signup Controller</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param> 
+			<name>contextConfigLocation</name> 
+			<value>/WEB-INF/context/signup-config.xml</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en_US</supported-locale>
+		<resource-bundle>content.Language</resource-bundle>
+		<portlet-info>
+			<title>Signup Controller</title>
+			<short-title>Signup Controller</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
 	<public-render-parameter>
 		<identifier>action</identifier>
 		<qname xmlns:x="http://www.nyuyou.com/public-render-parameters">x:action</qname>
@@ -666,4 +699,5 @@
 		<identifier>requestLessonTitle</identifier>
 		<qname xmlns:x="http://www.nyuyou.com/public-render-parameters">x:requestLessonTitle</qname>
 	</public-render-parameter>	
+
 </portlet-app>

@@ -15,6 +15,7 @@ import com.liferay.portal.kernel.dao.orm.Session;
 import com.liferay.portal.kernel.transaction.Transactional;
 import com.liferay.portal.kernel.util.GetterUtil;
 import com.liferay.portal.kernel.util.StringUtil;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
 import com.liferay.portal.service.ClassNameLocalServiceUtil;
 import com.liferay.portal.service.persistence.impl.BasePersistenceImpl;
 import com.liferay.portlet.social.model.SocialRelation;
@@ -380,6 +381,7 @@ public void findAndDeleteUserActivityByType(long userId, long clasPk, long creat
 	        QueryPos qPos = QueryPos.getInstance(q);
 	        qPos.add(ClassNameLocalServiceUtil.getClassNameId(Lesson.class));
 	        qPos.add(status);
+	        qPos.add(0);
 	        qPos.add(userId);
 	        lessons = (List<Lesson>) QueryUtil.list(q, getDialect(), start, end);
 	        
@@ -428,6 +430,8 @@ public List<Lesson> findAssetFeaturedLessons(String status, long userId,String[]
 	        QueryPos qPos = QueryPos.getInstance(q);
 	        qPos.add(ClassNameLocalServiceUtil.getClassNameId(Lesson.class));
 	        qPos.add(status);
+	        //checking workflow status -- by microexcel
+	        qPos.add(0);
 	        qPos.add(userId);
 	        lessons = (List<Lesson>) QueryUtil.list(q, getDialect(), start, end);
 	        
@@ -475,6 +479,7 @@ public List<Lesson> findLessonsWithCollaborations(String status, long userId,Str
 	        q.addEntity("Lesson",LessonImpl.class);
 	        QueryPos qPos = QueryPos.getInstance(q);
 	        qPos.add(status);
+	        qPos.add(0);
 	        qPos.add(userId);
 	        lessons = (List<Lesson>) QueryUtil.list(q, getDialect(), start, end);
 	        
@@ -589,6 +594,7 @@ public Set<Long> findPrivateLessonsIds(String[] privacy) {
 	        qPos.add(ClassNameLocalServiceUtil.getClassNameId(Lesson.class));
 	        qPos.add(categoryId);
 	        qPos.add(status);
+	        qPos.add(0);
 	        qPos.add(userId);
 	        lessons = (List<Lesson>) QueryUtil.list(q, getDialect(), start, end);
 	    } catch (Exception e) {
@@ -732,6 +738,7 @@ public List<Lesson> findAssetFeaturedLessonsByTag(long tagId,long userId, String
 	        qPos.add(ClassNameLocalServiceUtil.getClassNameId(Lesson.class));
 	        qPos.add(userGroupId);
 	        qPos.add(status);
+	        qPos.add(0);
 	        lessons = (List<Lesson>) QueryUtil.list(q, getDialect(), start, end);
 	        
 	    } catch (Exception e) {
@@ -780,6 +787,8 @@ public List<Lesson> findAssetFeaturedLessonsByTag(long tagId,long userId, String
 	        qPos.add(userGroupId);
 	        qPos.add(categoryId);
 	        qPos.add(status);
+	        // checking workflow status
+	        qPos.add(0);
 	        lessons = (List<Lesson>) QueryUtil.list(q, getDialect(), start, end);
 	    } catch (Exception e) {
 	    	
@@ -880,6 +889,7 @@ public List<Lesson> findAssetFeaturedLessonsByTag(long tagId,long userId, String
 	        qPos.add(userGroupId);
 	        qPos.add(tagId);
 	        qPos.add(status);
+	        qPos.add(0);
 	        lessons = (List<Lesson>) QueryUtil.list(q, getDialect(), start, end);
 	        
 	    } catch (Exception e) {
@@ -928,6 +938,8 @@ public List<Lesson> findAssetFeaturedUserGroupLessonsByTag(long userGroupId, lon
 	        qPos.add(userGroupId);
 	        qPos.add(tagId);
 	        qPos.add(status);
+	        // checking worflow status -- by microexcel
+	        qPos.add(0);
 	        lessons = (List<Lesson>) QueryUtil.list(q, getDialect(), start, end);
 	        
 	    } catch (Exception e) {
@@ -974,6 +986,8 @@ public List<Lesson> findFeaturedUserGroupLessons(long userGroupId, String status
 	        QueryPos qPos = QueryPos.getInstance(q);
 	        qPos.add(userGroupId);
 	        qPos.add(status);
+	        // checking workflow status -- by microexcel
+	        qPos.add(0);
 	        lessons = (List<Lesson>) QueryUtil.list(q, getDialect(), start, end);
 	        
 	    } catch (Exception e) {
@@ -1117,6 +1131,7 @@ public List<Lesson> findAssetLessonsByCategoryAndFeatured(long categoryId,boolea
         qPos.add(ClassNameLocalServiceUtil.getClassNameId(Lesson.class));
         qPos.add(categoryId);
         qPos.add(status);
+        qPos.add(WorkflowConstants.STATUS_APPROVED);
         lessons = (List<Lesson>) QueryUtil.list(q, getDialect(), start, end);
     } catch (Exception e) {
     	
@@ -1163,6 +1178,7 @@ public List<Lesson> findAssetLessonsByTagAndFeatured(long tagId,boolean featured
         qPos.add(ClassNameLocalServiceUtil.getClassNameId(Lesson.class));
         qPos.add(tagId);
         qPos.add(status);
+        qPos.add(WorkflowConstants.STATUS_APPROVED);
         lessons = (List<Lesson>) QueryUtil.list(q, getDialect(), start, end);
         
     } catch (Exception e) {

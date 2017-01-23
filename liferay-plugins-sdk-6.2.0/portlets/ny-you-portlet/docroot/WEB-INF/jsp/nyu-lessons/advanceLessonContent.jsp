@@ -623,6 +623,7 @@ function bindEvent(){
 		
 		if((docTitle.substring(docTitle.lastIndexOf("."), docTitle.length)).toLowerCase() != '.mp4'){
 			$(form).closest('.upload-media-modal-box').hide();
+			$('#mediaDivLoading').show();
 		}
 		
 		form = $(this)[0];//Again create Form object with Title value set in provious lines.

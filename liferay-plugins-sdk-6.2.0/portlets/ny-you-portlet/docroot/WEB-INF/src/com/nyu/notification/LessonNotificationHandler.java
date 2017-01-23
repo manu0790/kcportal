@@ -64,7 +64,10 @@ public class LessonNotificationHandler extends BaseUserNotificationHandler{
 		
 		
 		if(type.equalsIgnoreCase(Constant.LIFERAY_VENDOR_LESSON_STATUS_PUBLISH)){
-			bodyText = LanguageUtil.get(portletConfig, locale, "lesson")+StringPool.SPACE+Constant.TAG_STRONG_OPEN+lessonName+Constant.TAG_STRONG_CLOSE+StringPool.SPACE+LanguageUtil.get(portletConfig, locale, "is-small-case")+StringPool.SPACE+ type +StringPool.PERIOD+StringPool.SPACE+LanguageUtil.get(portletConfig, locale, "to-view-lesson")+Constant.TAG_ANCHOR_REF+lessonURL+Constant.TAG_FONT_COLOR_BLUE+LanguageUtil.get(portletConfig, locale, "click-here")+Constant.TAG_FONT_CLOSE_ANCHOR;
+			bodyText = LanguageUtil.get(portletConfig, locale, "lesson")+StringPool.SPACE+Constant.TAG_STRONG_OPEN+lessonName+Constant.TAG_STRONG_CLOSE+StringPool.SPACE+LanguageUtil.get(portletConfig, locale, "is-small-case")+StringPool.SPACE+ LanguageUtil.get(portletConfig, locale, "awaiting-review") +StringPool.PERIOD;
+			
+			// removed by -- microexcel.
+			//+StringPool.SPACE+LanguageUtil.get(portletConfig, locale, "to-view-lesson")+Constant.TAG_ANCHOR_REF+lessonURL+Constant.TAG_FONT_COLOR_BLUE+LanguageUtil.get(portletConfig, locale, "click-here")+Constant.TAG_FONT_CLOSE_ANCHOR
 		}
 		
 		if(type.equalsIgnoreCase(Constant.LIFERAY_VENDOR_LESSON_STATUS_DRAFT)){

@@ -163,7 +163,7 @@ String homeUrl=siteFriendlyUrl+Constant.PAGE_HOME;
 			 
 			<div class="custom-alert section-process-alert">  						
 				<div class="message-body" style="top:50%; margin-top:-75px"> 
-						<h4 class="message-heading"> <i class="icon-info-sign" style="font-size: 30px;"></i> publishing</h4>
+						<h4 class="message-heading"> <i class="icon-info-sign" style="font-size: 30px;"></i> Publishing</h4>
 						<div class="content"> 
 							<liferay-ui:message key="lesson-is-being-processed" /> 
 							<br> <liferay-ui:message key="you-will-receive-notification-message-on-process-completion" />
@@ -332,7 +332,7 @@ String homeUrl=siteFriendlyUrl+Constant.PAGE_HOME;
 								<span><liferay-ui:message key="view-reuse-with-attribution" /> </span> 
 							</span> 
 							<span class="span8">
-						<liferay-ui:message key="only-your-chosen-group-s-other-site-visitors-and-x-members-will-not-see-the-lesson" arguments="<%=Constant.CURRENT_BRAND_NAME%>" />
+						<liferay-ui:message key="only-your-chosen-group-s-other-site-visitors-and-x-members-will-not-see-the-lesson" /> <%-- arguments="<%=Constant.CURRENT_BRAND_NAME%>"  --%>
 							</span> 
 						</a> </li>
 						<c:if test="${voilatingSection.size()>0}">

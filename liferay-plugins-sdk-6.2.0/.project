@@ -10,7 +10,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1484730784668</id>
+			<id>1476114751357</id>
 			<name>ext</name>
 			<type>10</type>
 			<matcher>
@@ -19,7 +19,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1484730829651</id>
+			<id>1476114751795</id>
 			<name>hooks</name>
 			<type>10</type>
 			<matcher>
@@ -28,7 +28,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1484730785330</id>
+			<id>1476114752092</id>
 			<name>layouttpl</name>
 			<type>10</type>
 			<matcher>
@@ -37,7 +37,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1484730785651</id>
+			<id>1476114757279</id>
 			<name>layouttpl</name>
 			<type>10</type>
 			<matcher>
@@ -46,7 +46,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1484730786030</id>
+			<id>1476114758108</id>
 			<name>layouttpl</name>
 			<type>10</type>
 			<matcher>
@@ -55,7 +55,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1484730786493</id>
+			<id>1476114758514</id>
 			<name>portlets</name>
 			<type>10</type>
 			<matcher>
@@ -64,7 +64,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1484730786817</id>
+			<id>1476114758826</id>
 			<name>portlets</name>
 			<type>10</type>
 			<matcher>
@@ -73,7 +73,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1484730816357</id>
+			<id>1476114759686</id>
 			<name>portlets</name>
 			<type>10</type>
 			<matcher>
@@ -82,21 +82,39 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1484730817324</id>
+			<id>1476863564766</id>
+			<name>portlets</name>
+			<type>10</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-true-false-feedback-form-portlet</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1476872635212</id>
+			<name>portlets</name>
+			<type>10</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-true-false-FeedBakcWorkFlow-portlet</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1479393888689</id>
+			<name>portlets</name>
+			<type>10</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-true-false-ny-you-signup-portlet</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1476114760092</id>
 			<name>themes</name>
 			<type>10</type>
 			<matcher>
 				<id>org.eclipse.ui.ide.multiFilter</id>
 				<arguments>1.0-name-matches-true-false-ny-you-theme</arguments>
-			</matcher>
-		</filter>
-		<filter>
-			<id>1484730818450</id>
-			<name>webs</name>
-			<type>10</type>
-			<matcher>
-				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-true-false-resources-importer-web-master</arguments>
 			</matcher>
 		</filter>
 	</filteredResources>

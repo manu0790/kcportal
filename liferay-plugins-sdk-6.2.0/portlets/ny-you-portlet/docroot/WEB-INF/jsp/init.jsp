@@ -3,15 +3,6 @@
 <%@page import="com.liferay.portal.service.LayoutLocalServiceUtil"%>
 <%@page import="com.nyu.util.Constant"%>
 <%@page import="com.liferay.portal.util.PortalUtil"%>
-<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet"%>
-<%@ taglib uri="http://liferay.com/tld/portlet"   prefix="liferay-portlet" %>
-<%@ taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %>
-<%-- <%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %> --%>			<%--	commented by asif	 --%>
-<%@ taglib uri="http://alloy.liferay.com/tld/aui" prefix="aui"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ page import="javax.portlet.PortletURL"%>
 <%@page import="com.nyu.model.Lesson"%>
 <%@page import="java.util.List"%>
@@ -22,8 +13,6 @@
 <%@page import="com.liferay.portal.kernel.dao.orm.DynamicQuery"%>
 <%@page import="com.liferay.portlet.messageboards.model.MBMessage"%>
 <%@page import="com.liferay.portal.kernel.dao.orm.DynamicQueryFactoryUtil"%>
-<%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>			<%--	added by asif 	 --%>
-
 <%@page import="com.liferay.portlet.asset.service.AssetTagLocalServiceUtil"%>
 <%@page import="com.liferay.portlet.asset.service.AssetCategoryLocalServiceUtil"%>
 <%@page import="com.nyu.util.Constant"%>
@@ -39,7 +28,6 @@
 <%@page import="com.liferay.portal.model.User"%>
 <%@page import="java.util.Arrays"%>
 <%@page import="com.liferay.portal.service.UserLocalServiceUtil"%>
-<%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %> 
 <%@page import="com.liferay.portal.kernel.portlet.LiferayWindowState"%>
 <%@page import="com.nyu.util.CommonUtil"%>
 <%@page import="java.util.ArrayList"%>
@@ -76,7 +64,17 @@
 <%@page import="com.liferay.portlet.PortletURLFactoryUtil"%>
 <%@page import="javax.portlet.PortletURL"%>
 <%@page import="com.liferay.portal.service.LayoutLocalServiceUtil"%>
-<%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>	
+
+<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet"%>
+<%@ taglib uri="http://liferay.com/tld/portlet"   prefix="liferay-portlet" %>
+<%@ taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %>
+<%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %> 
+<%@ taglib uri="http://alloy.liferay.com/tld/aui" prefix="aui"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+
 <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=EDGE" />
 
 <portlet:defineObjects />

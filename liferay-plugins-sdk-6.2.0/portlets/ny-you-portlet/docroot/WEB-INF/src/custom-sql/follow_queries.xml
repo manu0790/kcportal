@@ -102,6 +102,7 @@
 			where AssetEntry.classNameId = ? 
 			and lesson.lessonId = AssetEntry.classPK
 			and lesson.status = ?
+			and lesson.lessonStatus = ?
 			and lesson.markedAs not in ([$markedAs$])
 			and (lesson.lessonPrivacy in ([$privacy$]) or lesson.lessonId in (Select colla.lessonId FROM nyyou_LessonCollaboration colla where colla.userId=? and colla.accessPermission='true'))
 			order by [$orderBy$] desc
@@ -116,6 +117,7 @@
 			where AssetEntry.classNameId = ? 
 			and lesson.lessonId = AssetEntry.classPK
 			and lesson.status = ?
+			and lesson.lessonStatus = ?
 			and lesson.featured_=true
 			and lesson.markedAs not in ([$markedAs$])
 			and (lesson.lessonPrivacy in ([$privacy$]) or lesson.lessonId in (Select colla.lessonId FROM nyyou_LessonCollaboration colla where colla.userId=? and colla.accessPermission='true'))
@@ -133,6 +135,7 @@
 			and AssetEntries_AssetCategories.entryId = AssetEntry.entryId
 			and AssetEntries_AssetCategories.categoryId = ?
 			and lesson.status = ?
+			and lesson.lessonStatus = ?
 			and lesson.markedAs not in ([$markedAs$])
 			and (lesson.lessonPrivacy in ([$privacy$]) or lesson.lessonId in (Select colla.lessonId FROM nyyou_LessonCollaboration colla where colla.userId=? and colla.accessPermission='true'))
 			order by [$orderBy$] desc
@@ -149,6 +152,7 @@
 		       and AssetEntries_AssetTags.entryId = AssetEntry.entryId
 		       and AssetEntries_AssetTags.tagId = ?
 		       and lesson.status = ?
+		       and lesson.lessonStatus = ?
 		       and lesson.markedAs not in ([$markedAs$])
 		       and (lesson.lessonPrivacy in ([$privacy$]) or lesson.lessonId in (Select colla.lessonId FROM nyyou_LessonCollaboration colla where colla.userId=? and colla.accessPermission='true'))
 		       order by [$orderBy$] desc
@@ -219,6 +223,7 @@
 			and nyulessonusergroups.lessonId = lesson.lessonId
 			and nyulessonusergroups.groupId = ?
 			and lesson.status = ?
+			and lesson.lessonStatus = ?
 			and lesson.markedAs not in ([$markedAs$])
 			and lesson.lessonPrivacy in ([$privacy$])
 			order by [$orderBy$] desc
@@ -237,6 +242,7 @@
 			and nyulessonusergroups.groupId = ?
 			and AssetEntries_AssetCategories.categoryId = ?
 			and lesson.status = ?
+			and lesson.lessonStatus = ?
 			and lesson.markedAs not in ([$markedAs$])
 			and lesson.lessonPrivacy in ([$privacy$]) 
 			order by [$orderBy$] desc
@@ -255,6 +261,7 @@
 			and nyulessonusergroups.groupId = ?
 			and AssetEntries_AssetTags.tagId = ?
 			and lesson.status = ?
+			and lesson.lessonStatus = ?
 			and lesson.markedAs not in ([$markedAs$])
 			and lesson.lessonPrivacy in ([$privacy$]) 
 			order by [$orderBy$] desc
@@ -273,6 +280,7 @@
 			and nyulessonusergroups.groupId = ?
 			and AssetEntries_AssetTags.tagId = ?
 			and lesson.status = ?
+			and lesson.lessonStatus = ?
 			and lesson.featured_=true
 			and lesson.markedAs not in ([$markedAs$])
 			and lesson.lessonPrivacy in ([$privacy$]) 
@@ -288,6 +296,7 @@
 			where nyulessonusergroups.lessonId = lesson.lessonId
 			and nyulessonusergroups.groupId = ?
 			and lesson.status = ?
+			and lesson.lessonStatus = ?
 			and lesson.featured_=true
 			and lesson.markedAs not in ([$markedAs$])
 			and lesson.lessonPrivacy in ([$privacy$]) 
@@ -440,6 +449,7 @@
 
 			SELECT lesson.* FROM nyyou_Lesson lesson 
 			where lesson.status = ?
+			and lesson.lessonStatus = ?
 			and lesson.markedAs not in ([$markedAs$])
 			and (lesson.lessonPrivacy in ([$privacy$]) or lesson.lessonId in (Select colla.lessonId FROM nyyou_LessonCollaboration colla where colla.userId=? and colla.accessPermission='true'))
 			order by [$orderBy$] desc
