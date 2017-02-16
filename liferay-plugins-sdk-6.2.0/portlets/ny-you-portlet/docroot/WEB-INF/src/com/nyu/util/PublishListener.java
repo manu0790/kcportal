@@ -153,9 +153,14 @@ public class PublishListener implements MessageListener {
 			for ( DocumentFile document : documentFiles ){
 				String location = getMediaLocationUrl( null, Long.toString(document.getResourceId()), null);
 				if( Validator.isNotNull(location) && (!location.trim().equals("")) && (!location.equalsIgnoreCase(Constant.ERROR)) && (!location.equalsIgnoreCase(Constant.NO_ID))){
-					document.setStatus(Constant.DOCUMENT_STATUS_CDN);
-					document.setDownloadUrl(location);
-					DocumentFileLocalServiceUtil.updateDocumentFile(document);
+					try{
+						document.setStatus(Constant.DOCUMENT_STATUS_CDN);
+						document.setDownloadUrl(location);
+						DocumentFileLocalServiceUtil.updateDocumentFile(document);
+					}catch(Exception e){
+						LOG.error("error while accessing CDN service " + e.getMessage());
+						e.printStackTrace();
+					}
 				}
 			}
 			
@@ -253,6 +258,8 @@ public class PublishListener implements MessageListener {
 		try {
 			location = serviceRegistry.getCdnServiceHandler().getDomainName( distributionId, videoFileId, mediaType );
 		} catch (RemoteException e) {
+			LOG.error("error while getting media location url " + e.getMessage());
+			e.printStackTrace();
 		}
 		
 		return location;
@@ -373,10 +380,8 @@ public class PublishListener implements MessageListener {
 				documentResult.append(line);
 			}
 			LOG.info("final Response From Resource :::"+ documentResult);
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
+		} catch (Exception e) {
+			LOG.error("error while conecting to url: "+url+"--->"+e);
 		}
 	}
 	private AuditReport createReport(ServiceContext serviceContext,String eventType,String classPK,String className,String addInfo) throws PortalException, SystemException

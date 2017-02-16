@@ -301,7 +301,7 @@
 					</a> </li>
 					
 					<c:if test="${voilatingSection.size()>0}">
-						<li  class='voilating text-center nyu-tooltip' data-title='"View Only" Permission is disabled because one of the sections is reusing the Content that is "View and Reuse". Please remove the section to publish as "View Only" or Publish the lesson with "View & Reuse" permission'  style="border: 1px dashed #999999;color:#999999;padding:5px">
+						<li  class='voilating text-center nyu-tooltip' data-title='<liferay-ui:message key="view-only-permission-is-disabled-because-one-of-the-sections-is-reusing-the-content-that-is-view-and-reuse-please-remove-the-section-to-publish-as-view-only-or-publish-the-lesson-with-view-n-reuse-permission" />'  style="border: 1px dashed #999999;color:#999999;padding:5px">
 							<div class="row-fluid">
 								<span class="span4"> 
 									<i class="icon-lock"> </i>

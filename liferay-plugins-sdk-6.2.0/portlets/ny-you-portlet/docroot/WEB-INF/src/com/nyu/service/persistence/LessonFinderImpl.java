@@ -479,7 +479,7 @@ public List<Lesson> findLessonsWithCollaborations(String status, long userId,Str
 	        q.addEntity("Lesson",LessonImpl.class);
 	        QueryPos qPos = QueryPos.getInstance(q);
 	        qPos.add(status);
-	        qPos.add(0);
+	        qPos.add(WorkflowConstants.STATUS_APPROVED);
 	        qPos.add(userId);
 	        lessons = (List<Lesson>) QueryUtil.list(q, getDialect(), start, end);
 	        

@@ -37,7 +37,10 @@ String siteFriendlyUrl=PortalUtil.getGroupFriendlyURL(themeDisplay.getScopeGroup
 String homeUrl=siteFriendlyUrl+Constant.PAGE_HOME;
 %>
 
-<portlet:resourceURL var="publishLessonURL" id="publishLesson"/>
+<portlet:resourceURL var="publishLessonURL" id="publishLesson"></portlet:resourceURL>
+	<%-- <portlet:param name="isEditing" value="true"/> --%>
+
+
 <portlet:resourceURL var="deleteImageURL" id="deleteImageURL" />
 
 <portlet:actionURL var="saveLessonDetailsURL">

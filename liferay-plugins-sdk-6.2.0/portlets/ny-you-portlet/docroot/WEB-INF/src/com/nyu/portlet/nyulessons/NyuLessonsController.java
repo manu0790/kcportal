@@ -89,6 +89,7 @@ import com.liferay.portal.service.ServiceContextFactory;
 import com.liferay.portal.service.UserLocalServiceUtil;
 import com.liferay.portal.service.UserNotificationEventLocalServiceUtil;
 import com.liferay.portal.service.WorkflowDefinitionLinkLocalServiceUtil;
+import com.liferay.portal.service.WorkflowInstanceLinkLocalServiceUtil;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.portal.util.PortalUtil;
 import com.liferay.portlet.PortletURLFactoryUtil;
@@ -802,6 +803,7 @@ public class NyuLessonsController {
 			if(!(themeDisplay.getLayout().getFriendlyURL().contains(Constant.PAGE_CREATE_LESSON))){
 				isCreateLesson = false;
 			}
+			boolean isEditing = ParamUtil.getBoolean(request, "isEditing");
 			Map<String, Object> serviceContextMap = new HashMap<String, Object>();
 			serviceContextMap.put(Constant.STRING_SERVICE_CONTEXT,serviceContext);
 			
@@ -818,27 +820,36 @@ public class NyuLessonsController {
 			message.setPayload(jsonObj);
 			MessageBusUtil.sendMessage(Constant.PUBLISH_LISTENER_DESTINATION, message);
 			
-			Lesson lesson = LessonLocalServiceUtil.getLesson(Long.parseLong(request.getParameter(Constant.COMMON_STRING_CONSTANT_LESSON_ID)));
-			
-			WorkflowDefinitionLink workflowDefinitionLink = null;
-			try {
-				workflowDefinitionLink = WorkflowDefinitionLinkLocalServiceUtil.getDefaultWorkflowDefinitionLink(
-						themeDisplay.getCompanyId(), Lesson.class.getName(), 0, 0);
-			} catch (Exception e) {
-				LOG.info("workflow not enabled -- "+ e);
-			} 
-			
-			if(lesson != null && workflowDefinitionLink != null){
-				//start workflow instance to lesson ---- microexcel
+			/*if(!isEditing){*/
+				Lesson lesson = LessonLocalServiceUtil.getLesson(Long.parseLong(request.getParameter(Constant.COMMON_STRING_CONSTANT_LESSON_ID)));
+				
+				WorkflowDefinitionLink workflowDefinitionLink = null;
 				try {
-					WorkflowHandlerRegistryUtil.startWorkflowInstance(
-							themeDisplay.getCompanyId(), themeDisplay.getScopeGroupId(), lesson.getCreateBy(), Lesson.class.getName(),
-							lesson.getLessonId(), lesson, serviceContext);
+					workflowDefinitionLink = WorkflowDefinitionLinkLocalServiceUtil.getDefaultWorkflowDefinitionLink(
+							themeDisplay.getCompanyId(), Lesson.class.getName(), 0, 0);
 				} catch (Exception e) {
-					LOG.error("error in starting workflow on lesson creation -- "+ e);
+					LOG.info("workflow not enabled -- "+ e);
+				} 
+				
+				if(lesson != null && workflowDefinitionLink != null){
+					//start workflow instance to lesson ---- microexcel
+					try {
+						//if(!isCreateLesson){
+							try {
+								WorkflowInstanceLinkLocalServiceUtil.deleteWorkflowInstanceLinks(themeDisplay.getCompanyId(), themeDisplay.getScopeGroupId()
+										, Lesson.class.getName(), lesson.getLessonId());
+							} catch (Exception e) {
+								//e.printStackTrace();
+							}
+						//}
+						WorkflowHandlerRegistryUtil.startWorkflowInstance(
+								themeDisplay.getCompanyId(), themeDisplay.getScopeGroupId(), lesson.getCreateBy(), Lesson.class.getName(),
+								lesson.getLessonId(), lesson, serviceContext);
+					} catch (Exception e) {
+						LOG.error("error in starting workflow on lesson creation -- "+ e);
+					}
 				}
-			}
-			
+			/*}*/
 			
 			response.getWriter().write(CommonUtil.JavaClassI18N(request, themeDisplay, "small-case-success"));
 		} catch (PortalException e) {
