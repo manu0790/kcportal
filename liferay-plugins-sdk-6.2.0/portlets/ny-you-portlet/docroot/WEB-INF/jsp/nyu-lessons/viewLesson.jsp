@@ -416,7 +416,7 @@ YUI().use('aui-toggler', function(Y) {
 			}
 			sharelabel = 'Private List (via group or by invitation only)';
 		}else if(share == '<%= Constant.PORTLET_PROP_SITE_NAME_SMALL %>'){
-			sharelabel = '<%=Constant.CURRENT_BRAND_NAME%> Community (Any alumnus, faculty, staff or student)';
+			sharelabel = 'Community (Registered ACCESS users)';
 		}else{
 			sharelabel = 'General Public (via social media, etc.)';
 		}

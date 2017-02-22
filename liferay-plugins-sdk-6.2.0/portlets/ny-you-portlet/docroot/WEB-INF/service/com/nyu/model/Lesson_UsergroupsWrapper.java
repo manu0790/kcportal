@@ -195,7 +195,7 @@ public class Lesson_UsergroupsWrapper implements Lesson_Usergroups,
 	}
 
 	@Override
-	public int compareTo(com.nyu.model.Lesson_Usergroups lesson_Usergroups) {
+	public int compareTo(Lesson_Usergroups lesson_Usergroups) {
 		return _lesson_Usergroups.compareTo(lesson_Usergroups);
 	}
 
@@ -205,17 +205,17 @@ public class Lesson_UsergroupsWrapper implements Lesson_Usergroups,
 	}
 
 	@Override
-	public com.liferay.portal.model.CacheModel<com.nyu.model.Lesson_Usergroups> toCacheModel() {
+	public com.liferay.portal.model.CacheModel<Lesson_Usergroups> toCacheModel() {
 		return _lesson_Usergroups.toCacheModel();
 	}
 
 	@Override
-	public com.nyu.model.Lesson_Usergroups toEscapedModel() {
+	public Lesson_Usergroups toEscapedModel() {
 		return new Lesson_UsergroupsWrapper(_lesson_Usergroups.toEscapedModel());
 	}
 
 	@Override
-	public com.nyu.model.Lesson_Usergroups toUnescapedModel() {
+	public Lesson_Usergroups toUnescapedModel() {
 		return new Lesson_UsergroupsWrapper(_lesson_Usergroups.toUnescapedModel());
 	}
 

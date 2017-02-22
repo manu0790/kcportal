@@ -39,6 +39,8 @@ public class LessonFinderImpl extends BasePersistenceImpl<SocialRelation> implem
 	
 	public static final String FIND_LESSON_BY_TYPE = LessonFinder.class.getName() +".findLessonByType";
 	
+	public static final String UPDATE_LESSON_STATUS_BY_PRIMARY_KEY = LessonFinder.class.getName() +".updateLessonStatusByPrimayKey";
+	
 	public static final String FIND_RECENT_ACTIVITY = LessonFinder.class.getName() +".findRecentActivity";
 	
 	public static final String FIND_LESSON_ACTIVITY = LessonFinder.class.getName() +".findLessonActivity";
@@ -1440,4 +1442,5 @@ public List<Lesson> findMyFavouriteLessons( long userId,String status, String or
 
 	    return resourceIds;
 	}
+	
 }

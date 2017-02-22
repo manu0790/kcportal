@@ -327,6 +327,12 @@ public class LessonLocalServiceUtil {
 		return getService().invokeMethod(name, parameterTypes, arguments);
 	}
 
+	public static com.nyu.model.Lesson getLessonById(long lessonId)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return getService().getLessonById(lessonId);
+	}
+
 	public static com.nyu.model.Lesson updateLesson(
 		com.nyu.model.Lesson lesson,
 		com.liferay.portal.service.ServiceContext serviceContext, int type,
@@ -335,6 +341,17 @@ public class LessonLocalServiceUtil {
 			com.liferay.portal.kernel.exception.SystemException {
 		return getService()
 				   .updateLesson(lesson, serviceContext, type, unpublishDocIds);
+	}
+
+	public static com.nyu.model.Lesson updateLessonByModel(
+		com.nyu.model.Lesson lesson)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getService().updateLessonByModel(lesson);
+	}
+
+	public static com.nyu.model.Lesson updateLessonStatusById(long lessonId)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getService().updateLessonStatusById(lessonId);
 	}
 
 	public static java.util.List<com.nyu.model.DocumentFile> getDocumentFileList(

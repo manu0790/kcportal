@@ -341,6 +341,13 @@ public class LessonLocalServiceWrapper implements LessonLocalService,
 	}
 
 	@Override
+	public com.nyu.model.Lesson getLessonById(long lessonId)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return _lessonLocalService.getLessonById(lessonId);
+	}
+
+	@Override
 	public com.nyu.model.Lesson updateLesson(com.nyu.model.Lesson lesson,
 		com.liferay.portal.service.ServiceContext serviceContext, int type,
 		java.lang.String[] unpublishDocIds)
@@ -348,6 +355,18 @@ public class LessonLocalServiceWrapper implements LessonLocalService,
 			com.liferay.portal.kernel.exception.SystemException {
 		return _lessonLocalService.updateLesson(lesson, serviceContext, type,
 			unpublishDocIds);
+	}
+
+	@Override
+	public com.nyu.model.Lesson updateLessonByModel(com.nyu.model.Lesson lesson)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _lessonLocalService.updateLessonByModel(lesson);
+	}
+
+	@Override
+	public com.nyu.model.Lesson updateLessonStatusById(long lessonId)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _lessonLocalService.updateLessonStatusById(lessonId);
 	}
 
 	@Override

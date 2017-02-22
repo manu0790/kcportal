@@ -297,7 +297,7 @@ public class UserBadgesWrapper implements UserBadges, ModelWrapper<UserBadges> {
 	}
 
 	@Override
-	public int compareTo(com.nyu.model.UserBadges userBadges) {
+	public int compareTo(UserBadges userBadges) {
 		return _userBadges.compareTo(userBadges);
 	}
 
@@ -307,17 +307,17 @@ public class UserBadgesWrapper implements UserBadges, ModelWrapper<UserBadges> {
 	}
 
 	@Override
-	public com.liferay.portal.model.CacheModel<com.nyu.model.UserBadges> toCacheModel() {
+	public com.liferay.portal.model.CacheModel<UserBadges> toCacheModel() {
 		return _userBadges.toCacheModel();
 	}
 
 	@Override
-	public com.nyu.model.UserBadges toEscapedModel() {
+	public UserBadges toEscapedModel() {
 		return new UserBadgesWrapper(_userBadges.toEscapedModel());
 	}
 
 	@Override
-	public com.nyu.model.UserBadges toUnescapedModel() {
+	public UserBadges toUnescapedModel() {
 		return new UserBadgesWrapper(_userBadges.toUnescapedModel());
 	}
 

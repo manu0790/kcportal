@@ -461,8 +461,7 @@ public class KeywordsCollaborationWrapper implements KeywordsCollaboration,
 	}
 
 	@Override
-	public int compareTo(
-		com.nyu.model.KeywordsCollaboration keywordsCollaboration) {
+	public int compareTo(KeywordsCollaboration keywordsCollaboration) {
 		return _keywordsCollaboration.compareTo(keywordsCollaboration);
 	}
 
@@ -472,17 +471,17 @@ public class KeywordsCollaborationWrapper implements KeywordsCollaboration,
 	}
 
 	@Override
-	public com.liferay.portal.model.CacheModel<com.nyu.model.KeywordsCollaboration> toCacheModel() {
+	public com.liferay.portal.model.CacheModel<KeywordsCollaboration> toCacheModel() {
 		return _keywordsCollaboration.toCacheModel();
 	}
 
 	@Override
-	public com.nyu.model.KeywordsCollaboration toEscapedModel() {
+	public KeywordsCollaboration toEscapedModel() {
 		return new KeywordsCollaborationWrapper(_keywordsCollaboration.toEscapedModel());
 	}
 
 	@Override
-	public com.nyu.model.KeywordsCollaboration toUnescapedModel() {
+	public KeywordsCollaboration toUnescapedModel() {
 		return new KeywordsCollaborationWrapper(_keywordsCollaboration.toUnescapedModel());
 	}
 

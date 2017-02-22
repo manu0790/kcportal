@@ -885,7 +885,7 @@ public class NYUUserGroupWrapper implements NYUUserGroup,
 	}
 
 	@Override
-	public int compareTo(com.nyu.model.NYUUserGroup nyuUserGroup) {
+	public int compareTo(NYUUserGroup nyuUserGroup) {
 		return _nyuUserGroup.compareTo(nyuUserGroup);
 	}
 
@@ -895,17 +895,17 @@ public class NYUUserGroupWrapper implements NYUUserGroup,
 	}
 
 	@Override
-	public com.liferay.portal.model.CacheModel<com.nyu.model.NYUUserGroup> toCacheModel() {
+	public com.liferay.portal.model.CacheModel<NYUUserGroup> toCacheModel() {
 		return _nyuUserGroup.toCacheModel();
 	}
 
 	@Override
-	public com.nyu.model.NYUUserGroup toEscapedModel() {
+	public NYUUserGroup toEscapedModel() {
 		return new NYUUserGroupWrapper(_nyuUserGroup.toEscapedModel());
 	}
 
 	@Override
-	public com.nyu.model.NYUUserGroup toUnescapedModel() {
+	public NYUUserGroup toUnescapedModel() {
 		return new NYUUserGroupWrapper(_nyuUserGroup.toUnescapedModel());
 	}
 

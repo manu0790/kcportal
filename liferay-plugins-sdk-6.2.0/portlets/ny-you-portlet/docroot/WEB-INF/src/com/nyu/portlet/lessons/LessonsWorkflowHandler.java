@@ -8,6 +8,7 @@ import com.liferay.portal.kernel.workflow.WorkflowConstants;
 import com.liferay.portlet.asset.service.AssetEntryLocalServiceUtil;
 import com.nyu.model.Lesson;
 import com.nyu.service.LessonLocalServiceUtil;
+import com.nyu.util.Constant;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -33,6 +34,7 @@ public class LessonsWorkflowHandler extends BaseWorkflowHandler{
 		long userId = GetterUtil.getLong(workflowContext.get(WorkflowConstants.CONTEXT_USER_ID));
 		long resourcePrimKey = GetterUtil.getLong(workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_PK));
 		Lesson lesson = LessonLocalServiceUtil.getLesson(resourcePrimKey);
+		lesson.setStatus(Constant.LIFERAY_VENDOR_LESSON_STATUS_PUBLISH);
 		lesson.setLessonStatus(status);
 		lesson.setStatusByUserId(userId);
 		lesson.setStatusDate(new Date());

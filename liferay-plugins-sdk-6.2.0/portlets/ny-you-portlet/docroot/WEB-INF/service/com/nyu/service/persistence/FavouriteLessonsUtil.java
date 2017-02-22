@@ -248,8 +248,7 @@ public class FavouriteLessonsUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static com.nyu.model.FavouriteLessons[] findByfavouriteLessonsByUserId_PrevAndNext(
-		com.nyu.service.persistence.FavouriteLessonsPK favouriteLessonsPK,
-		long userId,
+		FavouriteLessonsPK favouriteLessonsPK, long userId,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			com.nyu.NoSuchFavouriteLessonsException {
@@ -308,7 +307,7 @@ public class FavouriteLessonsUtil {
 	* @return the new favourite lessons
 	*/
 	public static com.nyu.model.FavouriteLessons create(
-		com.nyu.service.persistence.FavouriteLessonsPK favouriteLessonsPK) {
+		FavouriteLessonsPK favouriteLessonsPK) {
 		return getPersistence().create(favouriteLessonsPK);
 	}
 
@@ -321,7 +320,7 @@ public class FavouriteLessonsUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static com.nyu.model.FavouriteLessons remove(
-		com.nyu.service.persistence.FavouriteLessonsPK favouriteLessonsPK)
+		FavouriteLessonsPK favouriteLessonsPK)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			com.nyu.NoSuchFavouriteLessonsException {
 		return getPersistence().remove(favouriteLessonsPK);
@@ -342,7 +341,7 @@ public class FavouriteLessonsUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static com.nyu.model.FavouriteLessons findByPrimaryKey(
-		com.nyu.service.persistence.FavouriteLessonsPK favouriteLessonsPK)
+		FavouriteLessonsPK favouriteLessonsPK)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			com.nyu.NoSuchFavouriteLessonsException {
 		return getPersistence().findByPrimaryKey(favouriteLessonsPK);
@@ -356,7 +355,7 @@ public class FavouriteLessonsUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static com.nyu.model.FavouriteLessons fetchByPrimaryKey(
-		com.nyu.service.persistence.FavouriteLessonsPK favouriteLessonsPK)
+		FavouriteLessonsPK favouriteLessonsPK)
 		throws com.liferay.portal.kernel.exception.SystemException {
 		return getPersistence().fetchByPrimaryKey(favouriteLessonsPK);
 	}

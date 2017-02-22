@@ -98,7 +98,8 @@ public class PublishListener implements MessageListener {
 					removePriavteSetup(lesson);
 					lesson.setLessonPrivacy(share.equals(Constant.PORTLET_PROP_SITE_NAME_SMALL)? Constant.PORTLET_PROP_SITE_NAME_CAPITAL:share);
 				}
-				String status = publishObjects(lesson,permission);
+				lesson = publishObjects(lesson,permission);
+				String status = lesson.getStatus().equalsIgnoreCase(Constant.LIFERAY_VENDOR_LESSON_STATUS_PUBLISH) ? Constant.SUCCESS : Constant.FAILED;
 				ServiceContext sc = (ServiceContext) test.get(Constant.STRING_SERVICE_CONTEXT);
 				sendLessonNotification(lesson,sc,userId,lessonUrl,Constant.LIFERAY_VENDOR_LESSON_STATUS_PUBLISH,status);
 				if(!(status.equalsIgnoreCase(Constant.FAILED))){
@@ -119,9 +120,10 @@ public class PublishListener implements MessageListener {
 		}
 	}
 	
-	private String publishObjects( Lesson lesson,String permission) {
+	private Lesson publishObjects( Lesson lesson,String permission) {
 		//String damSecretKey = NyuUtil.getProperty( messageSource, "dam.secret.key");
 		
+		//Lesson lessonObj = null;
 		List<DocumentFile> documentFiles = null;
 		List<MediaMetaData> mediaMetaDataList = new ArrayList<MediaMetaData>();
 		List<String> SupportedPreviewFormat = Arrays.asList(Constant.EXPLICIT_PREVIEW_FORMATS.split(","));
@@ -214,7 +216,7 @@ public class PublishListener implements MessageListener {
 			
 			//LESSON PUBLISH
 			boolean isLessonPublishable = DocumentFileLocalServiceUtil.isLessonIsPublishable(lesson.getLessonId(),Constant.COMMON_STRING_CONSTANT_RESOURCE_SPACE,Constant.DOCUMENT_STATUS_COMPLETED);
-			
+			//System.out.println("isLessonPublishable ----> "+isLessonPublishable);
 			if(isLessonPublishable){
 				lesson.setStatus(Constant.LIFERAY_VENDOR_LESSON_STATUS_PUBLISH);
 				lesson.setUpdatedDate(new Date(System.currentTimeMillis()));
@@ -222,16 +224,26 @@ public class PublishListener implements MessageListener {
 				if(Validator.isNotNull(lesson.getMarkedAs()) && (lesson.getMarkedAs().equalsIgnoreCase(Constant.LESSON_FROM_DELETED_GROUP) ||lesson.getMarkedAs().equalsIgnoreCase(Constant.LESSON_DELETED_BY_USER) || lesson.getMarkedAs().equalsIgnoreCase(Constant.MARKEDAS_QUARANTINE))){
 					lesson.setMarkedAs(Constant.MARKEDAS_RELEASE);
 				}
+				
 				LessonLocalServiceUtil.updateLesson(lesson);
+				/*try{
+					
+					lessonObj = LessonLocalServiceUtil.updateLessonStatusById(lesson.getLessonId());
+				}catch(Exception e){
+					e.printStackTrace();
+				}
+				
+				System.out.println("lesson status ----> "+lessonObj.getStatus());*/
 				LessonPublishStatus = Constant.SUCCESS;
 			}
 			
 		} catch (Exception e) {
+			e.printStackTrace();
 			LOG.info(e.getMessage());
 		}
-		return LessonPublishStatus;
+		return lesson;
 	}
-
+	
 	private void updateDocumentsStatus(List<DocumentFile> documentFiles,
 			String[] ResultArray,String Status,String permission) throws SystemException {
 		for(String Response:ResultArray){

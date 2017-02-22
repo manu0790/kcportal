@@ -112,6 +112,11 @@ public class LessonLocalServiceImpl extends LessonLocalServiceBaseImpl {
 		return lesson;
 	}*/
 	
+	public Lesson getLessonById(long lessonId)
+		throws PortalException, SystemException {
+		return lessonPersistence.fetchByPrimaryKey(lessonId);
+	}
+	
 	public Lesson updateLesson(Lesson lesson, ServiceContext serviceContext, int type, String[] unpublishDocIds) throws SystemException, PortalException {
 		lesson = updateLesson(lesson);
 		performCleanUp(lesson.getLessonId(),"editLesson",serviceContext.getUserId(),type, unpublishDocIds);
@@ -121,6 +126,15 @@ public class LessonLocalServiceImpl extends LessonLocalServiceBaseImpl {
 		return lesson;
 	}
 	
+	public Lesson updateLessonByModel(Lesson lesson) throws SystemException {
+		return  lessonPersistence.update(lesson);
+	}
+	
+	public Lesson updateLessonStatusById(long lessonId) throws SystemException {
+		Lesson lesson = lessonPersistence.fetchByPrimaryKey(lessonId);
+		lesson.setStatus(Constant.LIFERAY_VENDOR_LESSON_STATUS_PUBLISH);
+		return lessonPersistence.update(lesson);
+	}
 
 	@Override
 	public List<DocumentFile> getDocumentFileList(long lessonId) throws SystemException{

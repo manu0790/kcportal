@@ -803,6 +803,7 @@ public class NyuLessonsController {
 			if(!(themeDisplay.getLayout().getFriendlyURL().contains(Constant.PAGE_CREATE_LESSON))){
 				isCreateLesson = false;
 			}
+			//System.out.println("is create lesson ---> "+isCreateLesson);
 			boolean isEditing = ParamUtil.getBoolean(request, "isEditing");
 			Map<String, Object> serviceContextMap = new HashMap<String, Object>();
 			serviceContextMap.put(Constant.STRING_SERVICE_CONTEXT,serviceContext);

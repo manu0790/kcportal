@@ -124,300 +124,312 @@ public class LessonLocalServiceClpInvoker {
 
 		_methodParameterTypes141 = new String[] { "java.lang.String" };
 
-		_methodName146 = "updateLesson";
+		_methodName146 = "getLessonById";
 
-		_methodParameterTypes146 = new String[] {
+		_methodParameterTypes146 = new String[] { "long" };
+
+		_methodName147 = "updateLesson";
+
+		_methodParameterTypes147 = new String[] {
 				"com.nyu.model.Lesson",
 				"com.liferay.portal.service.ServiceContext", "int",
 				"java.lang.String[][]"
 			};
 
-		_methodName147 = "getDocumentFileList";
+		_methodName148 = "updateLessonByModel";
 
-		_methodParameterTypes147 = new String[] { "long" };
+		_methodParameterTypes148 = new String[] { "com.nyu.model.Lesson" };
 
-		_methodName148 = "getDocumentFile";
+		_methodName149 = "updateLessonStatusById";
 
-		_methodParameterTypes148 = new String[] { "long" };
+		_methodParameterTypes149 = new String[] { "long" };
 
-		_methodName149 = "search";
+		_methodName150 = "getDocumentFileList";
 
-		_methodParameterTypes149 = new String[] {
+		_methodParameterTypes150 = new String[] { "long" };
+
+		_methodName151 = "getDocumentFile";
+
+		_methodParameterTypes151 = new String[] { "long" };
+
+		_methodName152 = "search";
+
+		_methodParameterTypes152 = new String[] {
 				"java.lang.String", "java.lang.String"
 			};
 
-		_methodName150 = "search";
+		_methodName153 = "search";
 
-		_methodParameterTypes150 = new String[] {
+		_methodParameterTypes153 = new String[] {
 				"java.lang.String", "java.lang.String", "long"
 			};
 
-		_methodName151 = "launcher";
+		_methodName154 = "launcher";
 
-		_methodParameterTypes151 = new String[] { "java.lang.String", "long" };
+		_methodParameterTypes154 = new String[] { "java.lang.String", "long" };
 
-		_methodName153 = "getLessonsByStatus";
+		_methodName156 = "getLessonsByStatus";
 
-		_methodParameterTypes153 = new String[] { "java.lang.String", "int", "int" };
+		_methodParameterTypes156 = new String[] { "java.lang.String", "int", "int" };
 
-		_methodName154 = "getLessonsByPrivacy";
+		_methodName157 = "getLessonsByPrivacy";
 
-		_methodParameterTypes154 = new String[] {
+		_methodParameterTypes157 = new String[] {
 				"java.lang.String", "java.lang.String", "java.lang.String",
 				"int", "int"
 			};
 
-		_methodName155 = "getLessonsByPrivacy";
+		_methodName158 = "getLessonsByPrivacy";
 
-		_methodParameterTypes155 = new String[] {
+		_methodParameterTypes158 = new String[] {
 				"java.lang.String[][]", "java.lang.String", "java.lang.String",
 				"int", "int"
 			};
 
-		_methodName156 = "getLessonsByCategoryId";
-
-		_methodParameterTypes156 = new String[] { "long" };
-
-		_methodName157 = "addUser";
-
-		_methodParameterTypes157 = new String[] { "long", "long", "long" };
-
-		_methodName158 = "getEntries";
-
-		_methodParameterTypes158 = new String[] { "long" };
-
-		_methodName159 = "getTimeDifference";
+		_methodName159 = "getLessonsByCategoryId";
 
 		_methodParameterTypes159 = new String[] { "long" };
 
-		_methodName160 = "getLessonsUploadedByAuthor";
+		_methodName160 = "addUser";
 
-		_methodParameterTypes160 = new String[] { "long" };
+		_methodParameterTypes160 = new String[] { "long", "long", "long" };
 
-		_methodName161 = "getLessonsUploadedByAuthorAndStatus";
+		_methodName161 = "getEntries";
 
-		_methodParameterTypes161 = new String[] { "long", "java.lang.String" };
+		_methodParameterTypes161 = new String[] { "long" };
 
-		_methodName162 = "findUserAliveLessons";
+		_methodName162 = "getTimeDifference";
 
 		_methodParameterTypes162 = new String[] { "long" };
 
-		_methodName163 = "findGroupAliveLessons";
+		_methodName163 = "getLessonsUploadedByAuthor";
 
 		_methodParameterTypes163 = new String[] { "long" };
 
 		_methodName164 = "getLessonsUploadedByAuthorAndStatus";
 
-		_methodParameterTypes164 = new String[] {
+		_methodParameterTypes164 = new String[] { "long", "java.lang.String" };
+
+		_methodName165 = "findUserAliveLessons";
+
+		_methodParameterTypes165 = new String[] { "long" };
+
+		_methodName166 = "findGroupAliveLessons";
+
+		_methodParameterTypes166 = new String[] { "long" };
+
+		_methodName167 = "getLessonsUploadedByAuthorAndStatus";
+
+		_methodParameterTypes167 = new String[] {
 				"long", "java.lang.String", "long"
 			};
 
-		_methodName165 = "getLessonsUploadedByAuthor";
+		_methodName168 = "getLessonsUploadedByAuthor";
 
-		_methodParameterTypes165 = new String[] { "long", "long" };
+		_methodParameterTypes168 = new String[] { "long", "long" };
 
-		_methodName166 = "findMostFollowedAuthors";
+		_methodName169 = "findMostFollowedAuthors";
 
-		_methodParameterTypes166 = new String[] {  };
+		_methodParameterTypes169 = new String[] {  };
 
-		_methodName167 = "findFollowingAuthors";
+		_methodName170 = "findFollowingAuthors";
 
-		_methodParameterTypes167 = new String[] { "long" };
+		_methodParameterTypes170 = new String[] { "long" };
 
-		_methodName168 = "findLessonByType";
+		_methodName171 = "findLessonByType";
 
-		_methodParameterTypes168 = new String[] { "long", "long", "int" };
+		_methodParameterTypes171 = new String[] { "long", "long", "int" };
 
-		_methodName169 = "findRecentActivity";
+		_methodName172 = "findRecentActivity";
 
-		_methodParameterTypes169 = new String[] { "long", "long" };
+		_methodParameterTypes172 = new String[] { "long", "long" };
 
-		_methodName170 = "findLessonActivity";
+		_methodName173 = "findLessonActivity";
 
-		_methodParameterTypes170 = new String[] { "long", "long", "long" };
+		_methodParameterTypes173 = new String[] { "long", "long", "long" };
 
-		_methodName171 = "findAndDeleteUserActivity";
+		_methodName174 = "findAndDeleteUserActivity";
 
-		_methodParameterTypes171 = new String[] { "long", "long", "long", "int" };
+		_methodParameterTypes174 = new String[] { "long", "long", "long", "int" };
 
-		_methodName172 = "addSocialActivity";
+		_methodName175 = "addSocialActivity";
 
-		_methodParameterTypes172 = new String[] {
+		_methodParameterTypes175 = new String[] {
 				"long", "long", "java.lang.String", "long", "int"
 			};
 
-		_methodName173 = "deleteUserSocialActivity";
+		_methodName176 = "deleteUserSocialActivity";
 
-		_methodParameterTypes173 = new String[] { "long" };
+		_methodParameterTypes176 = new String[] { "long" };
 
-		_methodName174 = "getLessonsByCategoryAndTags";
+		_methodName177 = "getLessonsByCategoryAndTags";
 
-		_methodParameterTypes174 = new String[] { "java.lang.String", "long" };
+		_methodParameterTypes177 = new String[] { "java.lang.String", "long" };
 
-		_methodName175 = "getLessonsByCategoryAndTags";
+		_methodName178 = "getLessonsByCategoryAndTags";
 
-		_methodParameterTypes175 = new String[] {
+		_methodParameterTypes178 = new String[] {
 				"java.lang.String", "long", "long"
 			};
 
-		_methodName176 = "performCleanUp";
+		_methodName179 = "performCleanUp";
 
-		_methodParameterTypes176 = new String[] {
+		_methodParameterTypes179 = new String[] {
 				"long", "java.lang.String", "long", "int",
 				"java.lang.String[][]"
 			};
 
-		_methodName181 = "findAssetLessons";
-
-		_methodParameterTypes181 = new String[] {
-				"java.lang.String", "long", "java.lang.String[][]",
-				"java.lang.String", "java.lang.String[][]", "int", "int"
-			};
-
-		_methodName182 = "findAssetFeaturedLessons";
-
-		_methodParameterTypes182 = new String[] {
-				"java.lang.String", "long", "java.lang.String[][]",
-				"java.lang.String", "java.lang.String[][]", "int", "int"
-			};
-
-		_methodName183 = "findAssetLessonsByCategory";
-
-		_methodParameterTypes183 = new String[] {
-				"long", "long", "java.lang.String", "java.lang.String[][]",
-				"java.lang.String", "java.lang.String[][]", "int", "int"
-			};
-
-		_methodName184 = "findAssetLessonsByTag";
+		_methodName184 = "findAssetLessons";
 
 		_methodParameterTypes184 = new String[] {
-				"long", "long", "java.lang.String", "java.lang.String[][]",
+				"java.lang.String", "long", "java.lang.String[][]",
 				"java.lang.String", "java.lang.String[][]", "int", "int"
 			};
 
-		_methodName185 = "findAssetFeaturedLessonsByTag";
+		_methodName185 = "findAssetFeaturedLessons";
 
 		_methodParameterTypes185 = new String[] {
-				"long", "long", "java.lang.String", "java.lang.String[][]",
+				"java.lang.String", "long", "java.lang.String[][]",
 				"java.lang.String", "java.lang.String[][]", "int", "int"
 			};
 
-		_methodName186 = "findAssetFeaturedUserGroupLessonsByTag";
+		_methodName186 = "findAssetLessonsByCategory";
 
 		_methodParameterTypes186 = new String[] {
 				"long", "long", "java.lang.String", "java.lang.String[][]",
 				"java.lang.String", "java.lang.String[][]", "int", "int"
 			};
 
-		_methodName187 = "findAssetUserGroupLessons";
+		_methodName187 = "findAssetLessonsByTag";
 
 		_methodParameterTypes187 = new String[] {
-				"long", "java.lang.String", "java.lang.String[][]",
+				"long", "long", "java.lang.String", "java.lang.String[][]",
 				"java.lang.String", "java.lang.String[][]", "int", "int"
 			};
 
-		_methodName188 = "findAssetUserGroupLessonsByCategory";
+		_methodName188 = "findAssetFeaturedLessonsByTag";
 
 		_methodParameterTypes188 = new String[] {
 				"long", "long", "java.lang.String", "java.lang.String[][]",
 				"java.lang.String", "java.lang.String[][]", "int", "int"
 			};
 
-		_methodName189 = "findAssetUserGroupLessonsByTag";
+		_methodName189 = "findAssetFeaturedUserGroupLessonsByTag";
 
 		_methodParameterTypes189 = new String[] {
 				"long", "long", "java.lang.String", "java.lang.String[][]",
 				"java.lang.String", "java.lang.String[][]", "int", "int"
 			};
 
-		_methodName190 = "findFeaturedUserGroupLessons";
+		_methodName190 = "findAssetUserGroupLessons";
 
 		_methodParameterTypes190 = new String[] {
 				"long", "java.lang.String", "java.lang.String[][]",
 				"java.lang.String", "java.lang.String[][]", "int", "int"
 			};
 
-		_methodName191 = "findAssetLessonsByCategoryAndUser";
+		_methodName191 = "findAssetUserGroupLessonsByCategory";
 
 		_methodParameterTypes191 = new String[] {
 				"long", "long", "java.lang.String", "java.lang.String[][]",
 				"java.lang.String", "java.lang.String[][]", "int", "int"
 			};
 
-		_methodName192 = "findAssetLessonsByTagAndUser";
+		_methodName192 = "findAssetUserGroupLessonsByTag";
 
 		_methodParameterTypes192 = new String[] {
 				"long", "long", "java.lang.String", "java.lang.String[][]",
 				"java.lang.String", "java.lang.String[][]", "int", "int"
 			};
 
-		_methodName193 = "findAssetLessonsByCategoryAndFeatured";
+		_methodName193 = "findFeaturedUserGroupLessons";
 
 		_methodParameterTypes193 = new String[] {
-				"long", "boolean", "java.lang.String", "java.lang.String[][]",
+				"long", "java.lang.String", "java.lang.String[][]",
 				"java.lang.String", "java.lang.String[][]", "int", "int"
 			};
 
-		_methodName194 = "findAssetLessonsByTagAndFeatured";
+		_methodName194 = "findAssetLessonsByCategoryAndUser";
 
 		_methodParameterTypes194 = new String[] {
+				"long", "long", "java.lang.String", "java.lang.String[][]",
+				"java.lang.String", "java.lang.String[][]", "int", "int"
+			};
+
+		_methodName195 = "findAssetLessonsByTagAndUser";
+
+		_methodParameterTypes195 = new String[] {
+				"long", "long", "java.lang.String", "java.lang.String[][]",
+				"java.lang.String", "java.lang.String[][]", "int", "int"
+			};
+
+		_methodName196 = "findAssetLessonsByCategoryAndFeatured";
+
+		_methodParameterTypes196 = new String[] {
 				"long", "boolean", "java.lang.String", "java.lang.String[][]",
 				"java.lang.String", "java.lang.String[][]", "int", "int"
 			};
 
-		_methodName195 = "findMyFavouriteLessons";
+		_methodName197 = "findAssetLessonsByTagAndFeatured";
 
-		_methodParameterTypes195 = new String[] {
+		_methodParameterTypes197 = new String[] {
+				"long", "boolean", "java.lang.String", "java.lang.String[][]",
+				"java.lang.String", "java.lang.String[][]", "int", "int"
+			};
+
+		_methodName198 = "findMyFavouriteLessons";
+
+		_methodParameterTypes198 = new String[] {
 				"long", "java.lang.String", "java.lang.String",
 				"java.lang.String[][]", "int", "int"
 			};
 
-		_methodName196 = "findMyLessonsWithCollaborations";
+		_methodName199 = "findMyLessonsWithCollaborations";
 
-		_methodParameterTypes196 = new String[] {
+		_methodParameterTypes199 = new String[] {
 				"long", "java.lang.String", "java.lang.String[][]", "int", "int"
 			};
 
-		_methodName197 = "deleteObjectivesOfLesson";
+		_methodName200 = "deleteObjectivesOfLesson";
 
-		_methodParameterTypes197 = new String[] { "long" };
+		_methodParameterTypes200 = new String[] { "long" };
 
-		_methodName198 = "getFavouriteLesson";
+		_methodName201 = "getFavouriteLesson";
 
-		_methodParameterTypes198 = new String[] { "long", "long" };
+		_methodParameterTypes201 = new String[] { "long", "long" };
 
-		_methodName199 = "getFavouriteLessonsByUserId";
+		_methodName202 = "getFavouriteLessonsByUserId";
 
-		_methodParameterTypes199 = new String[] { "long" };
+		_methodParameterTypes202 = new String[] { "long" };
 
-		_methodName200 = "findLessonsWithCollaborations";
+		_methodName203 = "findLessonsWithCollaborations";
 
-		_methodParameterTypes200 = new String[] {
+		_methodParameterTypes203 = new String[] {
 				"java.lang.String", "long", "java.lang.String[][]",
 				"java.lang.String", "java.lang.String[][]", "int", "int"
 			};
 
-		_methodName201 = "findPrivateLessonsIdsBelongToUser";
+		_methodName204 = "findPrivateLessonsIdsBelongToUser";
 
-		_methodParameterTypes201 = new String[] { "long" };
+		_methodParameterTypes204 = new String[] { "long" };
 
-		_methodName202 = "findPrivateLessonsIds";
+		_methodName205 = "findPrivateLessonsIds";
 
-		_methodParameterTypes202 = new String[] { "java.lang.String[][]" };
+		_methodParameterTypes205 = new String[] { "java.lang.String[][]" };
 
-		_methodName203 = "getLessonsMarkedAs";
+		_methodName206 = "getLessonsMarkedAs";
 
-		_methodParameterTypes203 = new String[] { "java.lang.String", "int", "int" };
+		_methodParameterTypes206 = new String[] { "java.lang.String", "int", "int" };
 
-		_methodName204 = "findArchivedMarkedAsLessonsByTag";
+		_methodName207 = "findArchivedMarkedAsLessonsByTag";
 
-		_methodParameterTypes204 = new String[] {
+		_methodParameterTypes207 = new String[] {
 				"long", "java.lang.String", "int", "int"
 			};
 
-		_methodName205 = "findArchivedMarkedAsLessonsByCategory";
+		_methodName208 = "findArchivedMarkedAsLessonsByCategory";
 
-		_methodParameterTypes205 = new String[] {
+		_methodParameterTypes208 = new String[] {
 				"long", "java.lang.String", "int", "int"
 			};
 	}
@@ -549,70 +561,85 @@ public class LessonLocalServiceClpInvoker {
 
 		if (_methodName146.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes146, parameterTypes)) {
+			return LessonLocalServiceUtil.getLessonById(((Long)arguments[0]).longValue());
+		}
+
+		if (_methodName147.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes147, parameterTypes)) {
 			return LessonLocalServiceUtil.updateLesson((com.nyu.model.Lesson)arguments[0],
 				(com.liferay.portal.service.ServiceContext)arguments[1],
 				((Integer)arguments[2]).intValue(),
 				(java.lang.String[])arguments[3]);
 		}
 
-		if (_methodName147.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes147, parameterTypes)) {
-			return LessonLocalServiceUtil.getDocumentFileList(((Long)arguments[0]).longValue());
-		}
-
 		if (_methodName148.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes148, parameterTypes)) {
-			return LessonLocalServiceUtil.getDocumentFile(((Long)arguments[0]).longValue());
+			return LessonLocalServiceUtil.updateLessonByModel((com.nyu.model.Lesson)arguments[0]);
 		}
 
 		if (_methodName149.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes149, parameterTypes)) {
-			return LessonLocalServiceUtil.search((java.lang.String)arguments[0],
-				(java.lang.String)arguments[1]);
+			return LessonLocalServiceUtil.updateLessonStatusById(((Long)arguments[0]).longValue());
 		}
 
 		if (_methodName150.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes150, parameterTypes)) {
-			return LessonLocalServiceUtil.search((java.lang.String)arguments[0],
-				(java.lang.String)arguments[1], ((Long)arguments[2]).longValue());
+			return LessonLocalServiceUtil.getDocumentFileList(((Long)arguments[0]).longValue());
 		}
 
 		if (_methodName151.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes151, parameterTypes)) {
-			return LessonLocalServiceUtil.launcher((java.lang.String)arguments[0],
-				((Long)arguments[1]).longValue());
+			return LessonLocalServiceUtil.getDocumentFile(((Long)arguments[0]).longValue());
+		}
+
+		if (_methodName152.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes152, parameterTypes)) {
+			return LessonLocalServiceUtil.search((java.lang.String)arguments[0],
+				(java.lang.String)arguments[1]);
 		}
 
 		if (_methodName153.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes153, parameterTypes)) {
+			return LessonLocalServiceUtil.search((java.lang.String)arguments[0],
+				(java.lang.String)arguments[1], ((Long)arguments[2]).longValue());
+		}
+
+		if (_methodName154.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes154, parameterTypes)) {
+			return LessonLocalServiceUtil.launcher((java.lang.String)arguments[0],
+				((Long)arguments[1]).longValue());
+		}
+
+		if (_methodName156.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes156, parameterTypes)) {
 			return LessonLocalServiceUtil.getLessonsByStatus((java.lang.String)arguments[0],
 				((Integer)arguments[1]).intValue(),
 				((Integer)arguments[2]).intValue());
 		}
 
-		if (_methodName154.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes154, parameterTypes)) {
+		if (_methodName157.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes157, parameterTypes)) {
 			return LessonLocalServiceUtil.getLessonsByPrivacy((java.lang.String)arguments[0],
 				(java.lang.String)arguments[1], (java.lang.String)arguments[2],
 				((Integer)arguments[3]).intValue(),
 				((Integer)arguments[4]).intValue());
 		}
 
-		if (_methodName155.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes155, parameterTypes)) {
+		if (_methodName158.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes158, parameterTypes)) {
 			return LessonLocalServiceUtil.getLessonsByPrivacy((java.lang.String[])arguments[0],
 				(java.lang.String)arguments[1], (java.lang.String)arguments[2],
 				((Integer)arguments[3]).intValue(),
 				((Integer)arguments[4]).intValue());
 		}
 
-		if (_methodName156.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes156, parameterTypes)) {
+		if (_methodName159.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes159, parameterTypes)) {
 			return LessonLocalServiceUtil.getLessonsByCategoryId(((Long)arguments[0]).longValue());
 		}
 
-		if (_methodName157.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes157, parameterTypes)) {
+		if (_methodName160.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes160, parameterTypes)) {
 			LessonLocalServiceUtil.addUser(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				((Long)arguments[2]).longValue());
@@ -620,81 +647,81 @@ public class LessonLocalServiceClpInvoker {
 			return null;
 		}
 
-		if (_methodName158.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes158, parameterTypes)) {
-			return LessonLocalServiceUtil.getEntries(((Long)arguments[0]).longValue());
-		}
-
-		if (_methodName159.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes159, parameterTypes)) {
-			return LessonLocalServiceUtil.getTimeDifference(((Long)arguments[0]).longValue());
-		}
-
-		if (_methodName160.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes160, parameterTypes)) {
-			return LessonLocalServiceUtil.getLessonsUploadedByAuthor(((Long)arguments[0]).longValue());
-		}
-
 		if (_methodName161.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes161, parameterTypes)) {
-			return LessonLocalServiceUtil.getLessonsUploadedByAuthorAndStatus(((Long)arguments[0]).longValue(),
-				(java.lang.String)arguments[1]);
+			return LessonLocalServiceUtil.getEntries(((Long)arguments[0]).longValue());
 		}
 
 		if (_methodName162.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes162, parameterTypes)) {
-			return LessonLocalServiceUtil.findUserAliveLessons(((Long)arguments[0]).longValue());
+			return LessonLocalServiceUtil.getTimeDifference(((Long)arguments[0]).longValue());
 		}
 
 		if (_methodName163.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes163, parameterTypes)) {
-			return LessonLocalServiceUtil.findGroupAliveLessons(((Long)arguments[0]).longValue());
+			return LessonLocalServiceUtil.getLessonsUploadedByAuthor(((Long)arguments[0]).longValue());
 		}
 
 		if (_methodName164.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes164, parameterTypes)) {
 			return LessonLocalServiceUtil.getLessonsUploadedByAuthorAndStatus(((Long)arguments[0]).longValue(),
-				(java.lang.String)arguments[1], ((Long)arguments[2]).longValue());
+				(java.lang.String)arguments[1]);
 		}
 
 		if (_methodName165.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes165, parameterTypes)) {
-			return LessonLocalServiceUtil.getLessonsUploadedByAuthor(((Long)arguments[0]).longValue(),
-				((Long)arguments[1]).longValue());
+			return LessonLocalServiceUtil.findUserAliveLessons(((Long)arguments[0]).longValue());
 		}
 
 		if (_methodName166.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes166, parameterTypes)) {
-			return LessonLocalServiceUtil.findMostFollowedAuthors();
+			return LessonLocalServiceUtil.findGroupAliveLessons(((Long)arguments[0]).longValue());
 		}
 
 		if (_methodName167.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes167, parameterTypes)) {
-			return LessonLocalServiceUtil.findFollowingAuthors(((Long)arguments[0]).longValue());
+			return LessonLocalServiceUtil.getLessonsUploadedByAuthorAndStatus(((Long)arguments[0]).longValue(),
+				(java.lang.String)arguments[1], ((Long)arguments[2]).longValue());
 		}
 
 		if (_methodName168.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes168, parameterTypes)) {
+			return LessonLocalServiceUtil.getLessonsUploadedByAuthor(((Long)arguments[0]).longValue(),
+				((Long)arguments[1]).longValue());
+		}
+
+		if (_methodName169.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes169, parameterTypes)) {
+			return LessonLocalServiceUtil.findMostFollowedAuthors();
+		}
+
+		if (_methodName170.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes170, parameterTypes)) {
+			return LessonLocalServiceUtil.findFollowingAuthors(((Long)arguments[0]).longValue());
+		}
+
+		if (_methodName171.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes171, parameterTypes)) {
 			return LessonLocalServiceUtil.findLessonByType(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				((Integer)arguments[2]).intValue());
 		}
 
-		if (_methodName169.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes169, parameterTypes)) {
+		if (_methodName172.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes172, parameterTypes)) {
 			return LessonLocalServiceUtil.findRecentActivity(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue());
 		}
 
-		if (_methodName170.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes170, parameterTypes)) {
+		if (_methodName173.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes173, parameterTypes)) {
 			return LessonLocalServiceUtil.findLessonActivity(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				((Long)arguments[2]).longValue());
 		}
 
-		if (_methodName171.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes171, parameterTypes)) {
+		if (_methodName174.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes174, parameterTypes)) {
 			LessonLocalServiceUtil.findAndDeleteUserActivity(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				((Long)arguments[2]).longValue(),
@@ -703,8 +730,8 @@ public class LessonLocalServiceClpInvoker {
 			return null;
 		}
 
-		if (_methodName172.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes172, parameterTypes)) {
+		if (_methodName175.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes175, parameterTypes)) {
 			LessonLocalServiceUtil.addSocialActivity(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				(java.lang.String)arguments[2],
@@ -714,28 +741,28 @@ public class LessonLocalServiceClpInvoker {
 			return null;
 		}
 
-		if (_methodName173.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes173, parameterTypes)) {
+		if (_methodName176.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes176, parameterTypes)) {
 			LessonLocalServiceUtil.deleteUserSocialActivity(((Long)arguments[0]).longValue());
 
 			return null;
 		}
 
-		if (_methodName174.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes174, parameterTypes)) {
+		if (_methodName177.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes177, parameterTypes)) {
 			return LessonLocalServiceUtil.getLessonsByCategoryAndTags((java.lang.String)arguments[0],
 				((Long)arguments[1]).longValue());
 		}
 
-		if (_methodName175.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes175, parameterTypes)) {
+		if (_methodName178.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes178, parameterTypes)) {
 			return LessonLocalServiceUtil.getLessonsByCategoryAndTags((java.lang.String)arguments[0],
 				((Long)arguments[1]).longValue(),
 				((Long)arguments[2]).longValue());
 		}
 
-		if (_methodName176.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes176, parameterTypes)) {
+		if (_methodName179.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes179, parameterTypes)) {
 			LessonLocalServiceUtil.performCleanUp(((Long)arguments[0]).longValue(),
 				(java.lang.String)arguments[1],
 				((Long)arguments[2]).longValue(),
@@ -745,8 +772,8 @@ public class LessonLocalServiceClpInvoker {
 			return null;
 		}
 
-		if (_methodName181.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes181, parameterTypes)) {
+		if (_methodName184.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes184, parameterTypes)) {
 			return LessonLocalServiceUtil.findAssetLessons((java.lang.String)arguments[0],
 				((Long)arguments[1]).longValue(),
 				(java.lang.String[])arguments[2],
@@ -756,8 +783,8 @@ public class LessonLocalServiceClpInvoker {
 				((Integer)arguments[6]).intValue());
 		}
 
-		if (_methodName182.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes182, parameterTypes)) {
+		if (_methodName185.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes185, parameterTypes)) {
 			return LessonLocalServiceUtil.findAssetFeaturedLessons((java.lang.String)arguments[0],
 				((Long)arguments[1]).longValue(),
 				(java.lang.String[])arguments[2],
@@ -767,45 +794,9 @@ public class LessonLocalServiceClpInvoker {
 				((Integer)arguments[6]).intValue());
 		}
 
-		if (_methodName183.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes183, parameterTypes)) {
-			return LessonLocalServiceUtil.findAssetLessonsByCategory(((Long)arguments[0]).longValue(),
-				((Long)arguments[1]).longValue(),
-				(java.lang.String)arguments[2],
-				(java.lang.String[])arguments[3],
-				(java.lang.String)arguments[4],
-				(java.lang.String[])arguments[5],
-				((Integer)arguments[6]).intValue(),
-				((Integer)arguments[7]).intValue());
-		}
-
-		if (_methodName184.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes184, parameterTypes)) {
-			return LessonLocalServiceUtil.findAssetLessonsByTag(((Long)arguments[0]).longValue(),
-				((Long)arguments[1]).longValue(),
-				(java.lang.String)arguments[2],
-				(java.lang.String[])arguments[3],
-				(java.lang.String)arguments[4],
-				(java.lang.String[])arguments[5],
-				((Integer)arguments[6]).intValue(),
-				((Integer)arguments[7]).intValue());
-		}
-
-		if (_methodName185.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes185, parameterTypes)) {
-			return LessonLocalServiceUtil.findAssetFeaturedLessonsByTag(((Long)arguments[0]).longValue(),
-				((Long)arguments[1]).longValue(),
-				(java.lang.String)arguments[2],
-				(java.lang.String[])arguments[3],
-				(java.lang.String)arguments[4],
-				(java.lang.String[])arguments[5],
-				((Integer)arguments[6]).intValue(),
-				((Integer)arguments[7]).intValue());
-		}
-
 		if (_methodName186.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes186, parameterTypes)) {
-			return LessonLocalServiceUtil.findAssetFeaturedUserGroupLessonsByTag(((Long)arguments[0]).longValue(),
+			return LessonLocalServiceUtil.findAssetLessonsByCategory(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				(java.lang.String)arguments[2],
 				(java.lang.String[])arguments[3],
@@ -817,18 +808,19 @@ public class LessonLocalServiceClpInvoker {
 
 		if (_methodName187.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes187, parameterTypes)) {
-			return LessonLocalServiceUtil.findAssetUserGroupLessons(((Long)arguments[0]).longValue(),
-				(java.lang.String)arguments[1],
-				(java.lang.String[])arguments[2],
-				(java.lang.String)arguments[3],
-				(java.lang.String[])arguments[4],
-				((Integer)arguments[5]).intValue(),
-				((Integer)arguments[6]).intValue());
+			return LessonLocalServiceUtil.findAssetLessonsByTag(((Long)arguments[0]).longValue(),
+				((Long)arguments[1]).longValue(),
+				(java.lang.String)arguments[2],
+				(java.lang.String[])arguments[3],
+				(java.lang.String)arguments[4],
+				(java.lang.String[])arguments[5],
+				((Integer)arguments[6]).intValue(),
+				((Integer)arguments[7]).intValue());
 		}
 
 		if (_methodName188.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes188, parameterTypes)) {
-			return LessonLocalServiceUtil.findAssetUserGroupLessonsByCategory(((Long)arguments[0]).longValue(),
+			return LessonLocalServiceUtil.findAssetFeaturedLessonsByTag(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				(java.lang.String)arguments[2],
 				(java.lang.String[])arguments[3],
@@ -840,7 +832,7 @@ public class LessonLocalServiceClpInvoker {
 
 		if (_methodName189.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes189, parameterTypes)) {
-			return LessonLocalServiceUtil.findAssetUserGroupLessonsByTag(((Long)arguments[0]).longValue(),
+			return LessonLocalServiceUtil.findAssetFeaturedUserGroupLessonsByTag(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				(java.lang.String)arguments[2],
 				(java.lang.String[])arguments[3],
@@ -852,7 +844,7 @@ public class LessonLocalServiceClpInvoker {
 
 		if (_methodName190.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes190, parameterTypes)) {
-			return LessonLocalServiceUtil.findFeaturedUserGroupLessons(((Long)arguments[0]).longValue(),
+			return LessonLocalServiceUtil.findAssetUserGroupLessons(((Long)arguments[0]).longValue(),
 				(java.lang.String)arguments[1],
 				(java.lang.String[])arguments[2],
 				(java.lang.String)arguments[3],
@@ -863,7 +855,7 @@ public class LessonLocalServiceClpInvoker {
 
 		if (_methodName191.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes191, parameterTypes)) {
-			return LessonLocalServiceUtil.findAssetLessonsByCategoryAndUser(((Long)arguments[0]).longValue(),
+			return LessonLocalServiceUtil.findAssetUserGroupLessonsByCategory(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				(java.lang.String)arguments[2],
 				(java.lang.String[])arguments[3],
@@ -875,7 +867,7 @@ public class LessonLocalServiceClpInvoker {
 
 		if (_methodName192.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes192, parameterTypes)) {
-			return LessonLocalServiceUtil.findAssetLessonsByTagAndUser(((Long)arguments[0]).longValue(),
+			return LessonLocalServiceUtil.findAssetUserGroupLessonsByTag(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				(java.lang.String)arguments[2],
 				(java.lang.String[])arguments[3],
@@ -887,20 +879,19 @@ public class LessonLocalServiceClpInvoker {
 
 		if (_methodName193.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes193, parameterTypes)) {
-			return LessonLocalServiceUtil.findAssetLessonsByCategoryAndFeatured(((Long)arguments[0]).longValue(),
-				((Boolean)arguments[1]).booleanValue(),
-				(java.lang.String)arguments[2],
-				(java.lang.String[])arguments[3],
-				(java.lang.String)arguments[4],
-				(java.lang.String[])arguments[5],
-				((Integer)arguments[6]).intValue(),
-				((Integer)arguments[7]).intValue());
+			return LessonLocalServiceUtil.findFeaturedUserGroupLessons(((Long)arguments[0]).longValue(),
+				(java.lang.String)arguments[1],
+				(java.lang.String[])arguments[2],
+				(java.lang.String)arguments[3],
+				(java.lang.String[])arguments[4],
+				((Integer)arguments[5]).intValue(),
+				((Integer)arguments[6]).intValue());
 		}
 
 		if (_methodName194.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes194, parameterTypes)) {
-			return LessonLocalServiceUtil.findAssetLessonsByTagAndFeatured(((Long)arguments[0]).longValue(),
-				((Boolean)arguments[1]).booleanValue(),
+			return LessonLocalServiceUtil.findAssetLessonsByCategoryAndUser(((Long)arguments[0]).longValue(),
+				((Long)arguments[1]).longValue(),
 				(java.lang.String)arguments[2],
 				(java.lang.String[])arguments[3],
 				(java.lang.String)arguments[4],
@@ -911,6 +902,42 @@ public class LessonLocalServiceClpInvoker {
 
 		if (_methodName195.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes195, parameterTypes)) {
+			return LessonLocalServiceUtil.findAssetLessonsByTagAndUser(((Long)arguments[0]).longValue(),
+				((Long)arguments[1]).longValue(),
+				(java.lang.String)arguments[2],
+				(java.lang.String[])arguments[3],
+				(java.lang.String)arguments[4],
+				(java.lang.String[])arguments[5],
+				((Integer)arguments[6]).intValue(),
+				((Integer)arguments[7]).intValue());
+		}
+
+		if (_methodName196.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes196, parameterTypes)) {
+			return LessonLocalServiceUtil.findAssetLessonsByCategoryAndFeatured(((Long)arguments[0]).longValue(),
+				((Boolean)arguments[1]).booleanValue(),
+				(java.lang.String)arguments[2],
+				(java.lang.String[])arguments[3],
+				(java.lang.String)arguments[4],
+				(java.lang.String[])arguments[5],
+				((Integer)arguments[6]).intValue(),
+				((Integer)arguments[7]).intValue());
+		}
+
+		if (_methodName197.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes197, parameterTypes)) {
+			return LessonLocalServiceUtil.findAssetLessonsByTagAndFeatured(((Long)arguments[0]).longValue(),
+				((Boolean)arguments[1]).booleanValue(),
+				(java.lang.String)arguments[2],
+				(java.lang.String[])arguments[3],
+				(java.lang.String)arguments[4],
+				(java.lang.String[])arguments[5],
+				((Integer)arguments[6]).intValue(),
+				((Integer)arguments[7]).intValue());
+		}
+
+		if (_methodName198.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes198, parameterTypes)) {
 			return LessonLocalServiceUtil.findMyFavouriteLessons(((Long)arguments[0]).longValue(),
 				(java.lang.String)arguments[1], (java.lang.String)arguments[2],
 				(java.lang.String[])arguments[3],
@@ -918,8 +945,8 @@ public class LessonLocalServiceClpInvoker {
 				((Integer)arguments[5]).intValue());
 		}
 
-		if (_methodName196.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes196, parameterTypes)) {
+		if (_methodName199.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes199, parameterTypes)) {
 			return LessonLocalServiceUtil.findMyLessonsWithCollaborations(((Long)arguments[0]).longValue(),
 				(java.lang.String)arguments[1],
 				(java.lang.String[])arguments[2],
@@ -927,26 +954,26 @@ public class LessonLocalServiceClpInvoker {
 				((Integer)arguments[4]).intValue());
 		}
 
-		if (_methodName197.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes197, parameterTypes)) {
+		if (_methodName200.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes200, parameterTypes)) {
 			LessonLocalServiceUtil.deleteObjectivesOfLesson(((Long)arguments[0]).longValue());
 
 			return null;
 		}
 
-		if (_methodName198.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes198, parameterTypes)) {
+		if (_methodName201.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes201, parameterTypes)) {
 			return LessonLocalServiceUtil.getFavouriteLesson(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue());
 		}
 
-		if (_methodName199.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes199, parameterTypes)) {
+		if (_methodName202.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes202, parameterTypes)) {
 			return LessonLocalServiceUtil.getFavouriteLessonsByUserId(((Long)arguments[0]).longValue());
 		}
 
-		if (_methodName200.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes200, parameterTypes)) {
+		if (_methodName203.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes203, parameterTypes)) {
 			return LessonLocalServiceUtil.findLessonsWithCollaborations((java.lang.String)arguments[0],
 				((Long)arguments[1]).longValue(),
 				(java.lang.String[])arguments[2],
@@ -956,33 +983,33 @@ public class LessonLocalServiceClpInvoker {
 				((Integer)arguments[6]).intValue());
 		}
 
-		if (_methodName201.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes201, parameterTypes)) {
+		if (_methodName204.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes204, parameterTypes)) {
 			return LessonLocalServiceUtil.findPrivateLessonsIdsBelongToUser(((Long)arguments[0]).longValue());
 		}
 
-		if (_methodName202.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes202, parameterTypes)) {
+		if (_methodName205.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes205, parameterTypes)) {
 			return LessonLocalServiceUtil.findPrivateLessonsIds((java.lang.String[])arguments[0]);
 		}
 
-		if (_methodName203.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes203, parameterTypes)) {
+		if (_methodName206.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes206, parameterTypes)) {
 			return LessonLocalServiceUtil.getLessonsMarkedAs((java.lang.String)arguments[0],
 				((Integer)arguments[1]).intValue(),
 				((Integer)arguments[2]).intValue());
 		}
 
-		if (_methodName204.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes204, parameterTypes)) {
+		if (_methodName207.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes207, parameterTypes)) {
 			return LessonLocalServiceUtil.findArchivedMarkedAsLessonsByTag(((Long)arguments[0]).longValue(),
 				(java.lang.String)arguments[1],
 				((Integer)arguments[2]).intValue(),
 				((Integer)arguments[3]).intValue());
 		}
 
-		if (_methodName205.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes205, parameterTypes)) {
+		if (_methodName208.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes208, parameterTypes)) {
 			return LessonLocalServiceUtil.findArchivedMarkedAsLessonsByCategory(((Long)arguments[0]).longValue(),
 				(java.lang.String)arguments[1],
 				((Integer)arguments[2]).intValue(),
@@ -1048,12 +1075,12 @@ public class LessonLocalServiceClpInvoker {
 	private String[] _methodParameterTypes150;
 	private String _methodName151;
 	private String[] _methodParameterTypes151;
+	private String _methodName152;
+	private String[] _methodParameterTypes152;
 	private String _methodName153;
 	private String[] _methodParameterTypes153;
 	private String _methodName154;
 	private String[] _methodParameterTypes154;
-	private String _methodName155;
-	private String[] _methodParameterTypes155;
 	private String _methodName156;
 	private String[] _methodParameterTypes156;
 	private String _methodName157;
@@ -1096,12 +1123,12 @@ public class LessonLocalServiceClpInvoker {
 	private String[] _methodParameterTypes175;
 	private String _methodName176;
 	private String[] _methodParameterTypes176;
-	private String _methodName181;
-	private String[] _methodParameterTypes181;
-	private String _methodName182;
-	private String[] _methodParameterTypes182;
-	private String _methodName183;
-	private String[] _methodParameterTypes183;
+	private String _methodName177;
+	private String[] _methodParameterTypes177;
+	private String _methodName178;
+	private String[] _methodParameterTypes178;
+	private String _methodName179;
+	private String[] _methodParameterTypes179;
 	private String _methodName184;
 	private String[] _methodParameterTypes184;
 	private String _methodName185;
@@ -1146,4 +1173,10 @@ public class LessonLocalServiceClpInvoker {
 	private String[] _methodParameterTypes204;
 	private String _methodName205;
 	private String[] _methodParameterTypes205;
+	private String _methodName206;
+	private String[] _methodParameterTypes206;
+	private String _methodName207;
+	private String[] _methodParameterTypes207;
+	private String _methodName208;
+	private String[] _methodParameterTypes208;
 }

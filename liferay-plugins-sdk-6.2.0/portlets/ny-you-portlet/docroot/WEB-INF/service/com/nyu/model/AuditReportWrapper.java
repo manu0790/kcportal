@@ -595,7 +595,7 @@ public class AuditReportWrapper implements AuditReport,
 	}
 
 	@Override
-	public int compareTo(com.nyu.model.AuditReport auditReport) {
+	public int compareTo(AuditReport auditReport) {
 		return _auditReport.compareTo(auditReport);
 	}
 
@@ -605,17 +605,17 @@ public class AuditReportWrapper implements AuditReport,
 	}
 
 	@Override
-	public com.liferay.portal.model.CacheModel<com.nyu.model.AuditReport> toCacheModel() {
+	public com.liferay.portal.model.CacheModel<AuditReport> toCacheModel() {
 		return _auditReport.toCacheModel();
 	}
 
 	@Override
-	public com.nyu.model.AuditReport toEscapedModel() {
+	public AuditReport toEscapedModel() {
 		return new AuditReportWrapper(_auditReport.toEscapedModel());
 	}
 
 	@Override
-	public com.nyu.model.AuditReport toUnescapedModel() {
+	public AuditReport toUnescapedModel() {
 		return new AuditReportWrapper(_auditReport.toUnescapedModel());
 	}
 

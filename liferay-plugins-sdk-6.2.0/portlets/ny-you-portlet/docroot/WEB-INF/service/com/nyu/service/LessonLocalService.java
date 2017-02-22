@@ -297,11 +297,22 @@ public interface LessonLocalService extends BaseLocalService,
 		java.lang.String[] parameterTypes, java.lang.Object[] arguments)
 		throws java.lang.Throwable;
 
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public com.nyu.model.Lesson getLessonById(long lessonId)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException;
+
 	public com.nyu.model.Lesson updateLesson(com.nyu.model.Lesson lesson,
 		com.liferay.portal.service.ServiceContext serviceContext, int type,
 		java.lang.String[] unpublishDocIds)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException;
+
+	public com.nyu.model.Lesson updateLessonByModel(com.nyu.model.Lesson lesson)
+		throws com.liferay.portal.kernel.exception.SystemException;
+
+	public com.nyu.model.Lesson updateLessonStatusById(long lessonId)
+		throws com.liferay.portal.kernel.exception.SystemException;
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public java.util.List<com.nyu.model.DocumentFile> getDocumentFileList(

@@ -867,7 +867,7 @@ public class DocumentFileWrapper implements DocumentFile,
 	}
 
 	@Override
-	public int compareTo(com.nyu.model.DocumentFile documentFile) {
+	public int compareTo(DocumentFile documentFile) {
 		return _documentFile.compareTo(documentFile);
 	}
 
@@ -877,17 +877,17 @@ public class DocumentFileWrapper implements DocumentFile,
 	}
 
 	@Override
-	public com.liferay.portal.model.CacheModel<com.nyu.model.DocumentFile> toCacheModel() {
+	public com.liferay.portal.model.CacheModel<DocumentFile> toCacheModel() {
 		return _documentFile.toCacheModel();
 	}
 
 	@Override
-	public com.nyu.model.DocumentFile toEscapedModel() {
+	public DocumentFile toEscapedModel() {
 		return new DocumentFileWrapper(_documentFile.toEscapedModel());
 	}
 
 	@Override
-	public com.nyu.model.DocumentFile toUnescapedModel() {
+	public DocumentFile toUnescapedModel() {
 		return new DocumentFileWrapper(_documentFile.toUnescapedModel());
 	}
 

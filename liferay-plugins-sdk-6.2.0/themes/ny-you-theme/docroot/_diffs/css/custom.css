@@ -974,6 +974,6 @@ ul#groupLessons li {
 /* WORD WRAP */
 .tooltip .tooltip-content,
 .word-wrap {
- 	word-wrap: break-word !important;
- 	word-break: break-all !important;
+ 	word-wrap: normal !important;
+ 	word-break: normal !important;
 } 

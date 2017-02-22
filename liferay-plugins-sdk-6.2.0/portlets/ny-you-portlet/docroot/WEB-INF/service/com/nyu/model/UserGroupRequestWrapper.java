@@ -357,7 +357,7 @@ public class UserGroupRequestWrapper implements UserGroupRequest,
 	}
 
 	@Override
-	public int compareTo(com.nyu.model.UserGroupRequest userGroupRequest) {
+	public int compareTo(UserGroupRequest userGroupRequest) {
 		return _userGroupRequest.compareTo(userGroupRequest);
 	}
 
@@ -367,17 +367,17 @@ public class UserGroupRequestWrapper implements UserGroupRequest,
 	}
 
 	@Override
-	public com.liferay.portal.model.CacheModel<com.nyu.model.UserGroupRequest> toCacheModel() {
+	public com.liferay.portal.model.CacheModel<UserGroupRequest> toCacheModel() {
 		return _userGroupRequest.toCacheModel();
 	}
 
 	@Override
-	public com.nyu.model.UserGroupRequest toEscapedModel() {
+	public UserGroupRequest toEscapedModel() {
 		return new UserGroupRequestWrapper(_userGroupRequest.toEscapedModel());
 	}
 
 	@Override
-	public com.nyu.model.UserGroupRequest toUnescapedModel() {
+	public UserGroupRequest toUnescapedModel() {
 		return new UserGroupRequestWrapper(_userGroupRequest.toUnescapedModel());
 	}
 

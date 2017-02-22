@@ -383,7 +383,7 @@ public class KeywordsWrapper implements Keywords, ModelWrapper<Keywords> {
 	}
 
 	@Override
-	public int compareTo(com.nyu.model.Keywords keywords) {
+	public int compareTo(Keywords keywords) {
 		return _keywords.compareTo(keywords);
 	}
 
@@ -393,17 +393,17 @@ public class KeywordsWrapper implements Keywords, ModelWrapper<Keywords> {
 	}
 
 	@Override
-	public com.liferay.portal.model.CacheModel<com.nyu.model.Keywords> toCacheModel() {
+	public com.liferay.portal.model.CacheModel<Keywords> toCacheModel() {
 		return _keywords.toCacheModel();
 	}
 
 	@Override
-	public com.nyu.model.Keywords toEscapedModel() {
+	public Keywords toEscapedModel() {
 		return new KeywordsWrapper(_keywords.toEscapedModel());
 	}
 
 	@Override
-	public com.nyu.model.Keywords toUnescapedModel() {
+	public Keywords toUnescapedModel() {
 		return new KeywordsWrapper(_keywords.toUnescapedModel());
 	}
 

@@ -393,7 +393,7 @@ public class LessonObjectivesWrapper implements LessonObjectives,
 	}
 
 	@Override
-	public int compareTo(com.nyu.model.LessonObjectives lessonObjectives) {
+	public int compareTo(LessonObjectives lessonObjectives) {
 		return _lessonObjectives.compareTo(lessonObjectives);
 	}
 
@@ -403,17 +403,17 @@ public class LessonObjectivesWrapper implements LessonObjectives,
 	}
 
 	@Override
-	public com.liferay.portal.model.CacheModel<com.nyu.model.LessonObjectives> toCacheModel() {
+	public com.liferay.portal.model.CacheModel<LessonObjectives> toCacheModel() {
 		return _lessonObjectives.toCacheModel();
 	}
 
 	@Override
-	public com.nyu.model.LessonObjectives toEscapedModel() {
+	public LessonObjectives toEscapedModel() {
 		return new LessonObjectivesWrapper(_lessonObjectives.toEscapedModel());
 	}
 
 	@Override
-	public com.nyu.model.LessonObjectives toUnescapedModel() {
+	public LessonObjectives toUnescapedModel() {
 		return new LessonObjectivesWrapper(_lessonObjectives.toUnescapedModel());
 	}
 
