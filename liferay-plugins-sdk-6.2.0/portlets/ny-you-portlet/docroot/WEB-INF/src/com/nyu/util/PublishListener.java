@@ -1,9 +1,7 @@
 package com.nyu.util;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.rmi.RemoteException;
@@ -130,7 +128,7 @@ public class PublishListener implements MessageListener {
 		//System.out.println("-------SupportedPreviewFormat------>"+SupportedPreviewFormat);
 		MediaMetaData mediaMetaData = null;
 		String damSecretKey = Constant.PORTLET_PROP_DAM_SECRET_KEY;
-		String LessonPublishStatus =Constant.FAILED;
+		//String LessonPublishStatus =Constant.FAILED;
 		String resourceIdArray[] =null;
 		try {
 			//FROM ACHIVE TO S3 PUSH	
@@ -234,7 +232,7 @@ public class PublishListener implements MessageListener {
 				}
 				
 				System.out.println("lesson status ----> "+lessonObj.getStatus());*/
-				LessonPublishStatus = Constant.SUCCESS;
+				//LessonPublishStatus = Constant.SUCCESS;
 			}
 			
 		} catch (Exception e) {

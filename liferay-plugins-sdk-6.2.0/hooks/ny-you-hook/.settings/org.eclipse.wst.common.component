@@ -5,6 +5,9 @@
         <dependent-module archiveName="ny-you-portlet-service.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/ny-you-portlet/docroot/WEB-INF/lib/ny-you-portlet-service.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="ny-you-portlet-service.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/ny-you-portlet/docroot/WEB-INF/lib/ny-you-portlet-service.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="ny-you-hook"/>
         <property name="java-output-path" value="/ny-you-hook/docroot/WEB-INF/classes"/>
     </wb-module>

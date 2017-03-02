@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.ListIterator;
@@ -444,6 +445,12 @@ public void addUpdateGroup(ResourceRequest request, ResourceResponse response) t
 		
 		if(userGroupReferences != null && workflowDefinitionLink != null){
 			//start workflow instance to userGroup --- microexcel.
+			
+			HashMap<String, Object> workflowContext = new HashMap<String, Object>();
+
+			workflowContext.put(WorkflowConstants.CONTEXT_NOTIFICATION_SENDER_ADDRESS, Constant.WORKFLOW_SENDER_ADDRESS);
+			workflowContext.put(WorkflowConstants.CONTEXT_NOTIFICATION_SENDER_NAME, Constant.WORKFLOW_SENDER_NAME);
+			serviceContext.setAttribute("workflowContext", workflowContext);
 			try {
 				WorkflowHandlerRegistryUtil.startWorkflowInstance(companyId, userId, NYUUserGroup.class.getName(),
 						userGroupReferences.getPrimaryKey(), userGroupReferences, serviceContext);

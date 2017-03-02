@@ -9,6 +9,9 @@ public interface Constant {
 	public static String SITE_NAME = PortletProps.get("site.name");	
 	public static String VOCABULARY_NAME = PortletProps.get("vocabulary.name");
 	
+	public static String WORKFLOW_SENDER_ADDRESS = PortletProps.get("workflow.sender.address");
+	public static String WORKFLOW_SENDER_NAME = PortletProps.get("workflow.sender.name");
+	
 	public static int LESSON_THUMBNAIL_IMAGE_WIDTH = 330;
 	
 	public static int LESSON_THUMBNAIL_IMAGE_HEIGHT = 173;
@@ -113,9 +116,6 @@ public interface Constant {
 	public static String PORTLET_ADMIN = "admin_WAR_nyyouportlet";
 	public static String PORTLET_VIEW_LESSON = "viewlesson_WAR_nyyouportlet";
 	public static String PORTLET_TRENDING = "trending_WAR_nyyouportlet";
-	
-	
-	
 	
 	public static String POPULAR="Popular";
 	public static String LATEST="Latest";

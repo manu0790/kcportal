@@ -46,13 +46,10 @@ import org.springframework.web.portlet.bind.annotation.ResourceMapping;
 import com.liferay.counter.service.CounterLocalServiceUtil;
 import com.liferay.portal.ImageTypeException;
 import com.liferay.portal.NoSuchRepositoryException;
-import com.liferay.portal.NoSuchWorkflowDefinitionLinkException;
-import com.liferay.portal.kernel.dao.orm.Criterion;
 import com.liferay.portal.kernel.dao.orm.DynamicQuery;
 import com.liferay.portal.kernel.dao.orm.DynamicQueryFactoryUtil;
 import com.liferay.portal.kernel.dao.orm.OrderFactoryUtil;
 import com.liferay.portal.kernel.dao.orm.PropertyFactoryUtil;
-import com.liferay.portal.kernel.dao.orm.RestrictionsFactoryUtil;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.image.ImageBag;
@@ -64,11 +61,9 @@ import com.liferay.portal.kernel.json.JSONObject;
 import com.liferay.portal.kernel.messaging.Message;
 import com.liferay.portal.kernel.messaging.MessageBusUtil;
 import com.liferay.portal.kernel.repository.model.FileEntry;
-import com.liferay.portal.kernel.servlet.SessionMessages;
 import com.liferay.portal.kernel.upload.UploadException;
 import com.liferay.portal.kernel.upload.UploadPortletRequest;
 import com.liferay.portal.kernel.util.Base64;
-import com.liferay.portal.kernel.util.ContentTypes;
 import com.liferay.portal.kernel.util.GetterUtil;
 import com.liferay.portal.kernel.util.MimeTypesUtil;
 import com.liferay.portal.kernel.util.ParamUtil;
@@ -96,7 +91,6 @@ import com.liferay.portlet.PortletURLFactoryUtil;
 import com.liferay.portlet.asset.model.AssetTag;
 import com.liferay.portlet.asset.service.AssetEntryLocalServiceUtil;
 import com.liferay.portlet.asset.service.AssetTagLocalServiceUtil;
-import com.liferay.portlet.blogs.model.BlogsEntry;
 import com.liferay.portlet.documentlibrary.NoSuchFileEntryException;
 import com.liferay.portlet.messageboards.model.MBMessage;
 import com.liferay.portlet.messageboards.service.MBMessageLocalServiceUtil;
@@ -114,7 +108,6 @@ import com.nyu.model.impl.DocumentSectionImpl;
 import com.nyu.model.impl.LessonCollaborationImpl;
 import com.nyu.model.impl.LessonImpl;
 import com.nyu.model.impl.LessonObjectivesImpl;
-import com.nyu.portlet.vo.DocumentVO;
 import com.nyu.service.AnswerRequestLocalServiceUtil;
 import com.nyu.service.DocumentFileLocalServiceUtil;
 import com.nyu.service.DocumentSectionLocalServiceUtil;
@@ -804,7 +797,7 @@ public class NyuLessonsController {
 				isCreateLesson = false;
 			}
 			//System.out.println("is create lesson ---> "+isCreateLesson);
-			boolean isEditing = ParamUtil.getBoolean(request, "isEditing");
+			//boolean isEditing = ParamUtil.getBoolean(request, "isEditing");
 			Map<String, Object> serviceContextMap = new HashMap<String, Object>();
 			serviceContextMap.put(Constant.STRING_SERVICE_CONTEXT,serviceContext);
 			
@@ -843,6 +836,13 @@ public class NyuLessonsController {
 								//e.printStackTrace();
 							}
 						//}
+							
+						HashMap<String, Object> workflowContext = new HashMap<String, Object>();
+
+						workflowContext.put(WorkflowConstants.CONTEXT_NOTIFICATION_SENDER_ADDRESS, Constant.WORKFLOW_SENDER_ADDRESS);
+						workflowContext.put(WorkflowConstants.CONTEXT_NOTIFICATION_SENDER_NAME, Constant.WORKFLOW_SENDER_NAME);
+						serviceContext.setAttribute("workflowContext", workflowContext);
+							
 						WorkflowHandlerRegistryUtil.startWorkflowInstance(
 								themeDisplay.getCompanyId(), themeDisplay.getScopeGroupId(), lesson.getCreateBy(), Lesson.class.getName(),
 								lesson.getLessonId(), lesson, serviceContext);
